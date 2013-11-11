@@ -1,0 +1,1661 @@
+@font-face {
+    font-family: 'ArialRoundedMTBoldBold';
+    src: url('/assets/font/arial_rounded_mt_bold.eot');
+    src: url('/assets/font/arial_rounded_mt_bold.eot') format('embedded-opentype'),
+         url('/assets/font/arial_rounded_mt_bold.woff') format('woff'),
+         url('/assets/font/arial_rounded_mt_bold.ttf') format('truetype'),
+         url('/assets/font/arial_rounded_mt_bold.svg#ArialRoundedMTBoldBold') format('svg');
+}
+
+/* Disable text selection */
+*:focus {
+	outline: 0 !important;
+}
+
+*:not(input) {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: moz-none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+/**
+	DEFAULT
+**/
+.panel {
+	border:					1px solid #c1cbb0;
+	background: 			#f5f9ec;
+	-webkit-border-radius: 	10px;
+	-moz-border-radius: 	10px;
+	border-radius: 			10px;
+	behavior: 				url(/assets/css/PIE.htc);
+}
+
+.panel .panel-heading {
+	background: 					#658a42; /* Old browsers */
+	background: 					-moz-linear-gradient(top, #658a42 0%, #364b22 100%); /* FF3.6+ */
+	background: 					-webkit-gradient(linear, left top, left bottom, color-stop(0%,#658a42), color-stop(100%,#364b22)); /* Chrome,Safari4+ */
+	background: 					-webkit-linear-gradient(top, #658a42 0%,#364b22 100%); /* Chrome10+,Safari5.1+ */
+	background: 					-o-linear-gradient(top, #658a42 0%,#364b22 100%); /* Opera 11.10+ */
+	background: 					-ms-linear-gradient(top, #658a42 0%,#364b22 100%); /* IE10+ */
+	background: 					linear-gradient(to bottom, #658a42 0%,#364b22 100%); /* W3C */
+	filter: 						progid:DXImageTransform.Microsoft.gradient( startColorstr='#658a42', endColorstr='#364b22',GradientType=0 ); /* IE6-9 */
+	border: 						1px solid #3d5527;
+	padding: 						15px 16px 10px 16px;
+	margin: 						-16px -16px 15px -16px;
+	text-align: 					center;
+	-webkit-border-top-left-radius: 10px;
+	-webkit-border-top-right-radius:10px;
+	-moz-border-radius-topleft: 	10px;
+	-moz-border-radius-topright: 	10px;
+	border-top-left-radius: 		10px;
+	border-top-right-radius: 		10px;
+	behavior: 						url(/assets/css/PIE.htc);
+}
+
+.panel .panel-heading .panel-title {
+	color: 			#FFF;
+	font-family: 	"ArialRoundedMTBoldBold";
+	font-size: 		14.5px;
+	text-shadow: 	0px -1px 0px rgba(0, 0, 0, 1);
+	behavior: 		url(/assets/css/PIE.htc);
+}
+
+/* upside down version of the panel */
+.panel .panel-footer {
+	background: 						#658a42; /* Old browsers */
+	background: 						-moz-linear-gradient(top, #658a42 0%, #364b22 100%); /* FF3.6+ */
+	background: 						-webkit-gradient(linear, left top, left bottom, color-stop(0%,#658a42), color-stop(100%,#364b22)); /* Chrome,Safari4+ */
+	background: 						-webkit-linear-gradient(top, #658a42 0%,#364b22 100%); /* Chrome10+,Safari5.1+ */
+	background: 						-o-linear-gradient(top, #658a42 0%,#364b22 100%); /* Opera 11.10+ */
+	background: 						-ms-linear-gradient(top, #658a42 0%,#364b22 100%); /* IE10+ */
+	background: 						linear-gradient(to bottom, #658a42 0%,#364b22 100%); /* W3C */
+	filter: 							progid:DXImageTransform.Microsoft.gradient( startColorstr='#658a42', endColorstr='#364b22',GradientType=0 ); /* IE6-9 */
+	border: 							1px solid #3d5527;
+	padding: 							10px 15px 10px 15px;
+	margin: 							15px -16px -16px;
+	text-align: 						center;
+	-webkit-border-bottom-left-radius: 	10px;
+	-webkit-border-bottom-right-radius:	10px;
+	-moz-border-radius-bottomleft: 		10px;
+	-moz-border-radius-bottomright: 	10px;
+	border-top-bottom-radius: 			10px;
+	border-top-bottom-radius: 			10px;
+	behavior: 							url(/assets/css/PIE.htc);
+}
+
+.panel .panel-footer .panel-title {
+	color: 				#FFF;
+	font-size:			17px;
+	text-shadow: 		0px -1px 0px rgba(0, 0, 0, 1);
+	behavior: 			url(/assets/css/PIE.htc);
+}
+
+.big-orange-button {
+	border: 			0px;
+	background-image: 	url(/assets/orange-button-large.png);
+	width: 				222px;
+	height: 			39px;
+	color: 				#FFF;
+	font-size: 			14.5px;
+	font-family: 		"ArialRoundedMTBoldBold";
+	text-shadow: 		0px -1px 0px rgba(0, 0, 0, 1);
+	behavior: 			url(/assets/css/PIE.htc);
+}
+
+.orange-button {
+	border: 			0px;
+	background-image: 	url(/assets/orange-button-middle.png);
+	width: 				168px;
+	height: 			39px;
+	color: 				#FFF;
+	font-size: 			14.5px;
+	font-family: 		"ArialRoundedMTBoldBold";
+	text-shadow: 		0px -1px 0px rgba(0, 0, 0, 1);
+	behavior: 			url(/assets/css/PIE.htc);
+}
+
+.orange-button img {
+	margin: -3px 0 0 10px;
+}
+
+.orange-button-small {
+	border: 			0px;
+	background-image: 	url(/assets/orange-button-small.png);
+	width: 				194px;
+	height: 			31px;
+	color: 				#FFF;
+	line-height: 		17px;
+	font-size: 			14.5px;
+	font-family: 		"ArialRoundedMTBoldBold";
+	text-shadow: 		0px -1px 0px rgba(0, 0, 0, 1);
+	behavior: 			url(/assets/css/PIE.htc);
+}
+
+.orange-button-square {
+	border: 			0px;
+	background-image: 	url(/assets/orange-button-square.png);
+	width: 				140px;
+	height: 			72px;
+	color: 				#FFF;
+	line-height: 		17px;
+	font-size: 			15.3px;
+	font-family: 		"ArialRoundedMTBoldBold";
+	text-shadow: 		0px -1px 0px rgba(125, 63, 16, 1);
+	behavior: 			url(/assets/css/PIE.htc);
+}
+
+.orange-button-square-light {
+	border: 			0px;
+	background-image: 	url(/assets/orange-button-square-light.png);
+	width: 				86px;
+	height: 			54px;
+	color: 				#683609 !important;
+	line-height: 		17px;
+	font-size: 			18.1px;
+	font-family: 		"ArialRoundedMTBoldBold";
+	text-shadow: 		0px 1px 0px rgba(255, 255, 255, 0.45);
+	behavior: 			url(/assets/css/PIE.htc);
+}
+
+.orange-button-dropdown {
+	border: 			0px;
+	background-image: 	url(/assets/orange-button-dropdown.png);
+	padding:			6px 33px 8px 0px;
+	width: 				124px;
+	height: 			29px;
+	color: 				#FFF;
+	line-height: 		17px;
+	font-size: 			15.8px;
+	font-family: 		"ArialRoundedMTBoldBold";
+	text-shadow: 		0px -1px 0px rgba(0, 0, 0, 0.42);
+	behavior: 			url(/assets/css/PIE.htc);
+}
+
+.big-green-button {
+	border: 			0px;
+	background-image: 	url(/assets/large-green-button.png);
+	width: 				328px;
+	height: 			58px;
+	color: 				#FFF;
+	font-size: 			17.5px;
+	font-family: 		"ArialRoundedMTBoldBold";
+	text-shadow: 		0px -1px 0px rgba(0, 0, 0, 1);
+	behavior: 			url(/assets/css/PIE.htc);
+}
+
+.green-button {
+	border: 			0px;
+	background-image: 	url(/assets/green-button.png);
+	width: 				222px;
+	height: 			39px;
+	color: 				#FFF;
+	font-size: 			14.5px;
+	font-family: 		"ArialRoundedMTBoldBold";
+	text-shadow: 		0px -1px 0px rgba(0, 0, 0, 1);
+	behavior: 			url(/assets/css/PIE.htc);
+}
+
+.green-button-orange-border {
+	border: 			0px;
+	background-image: 	url(/assets/green-button-orange-border.png);
+	width: 				114px;
+	height: 			34px;
+	color: 				#FFF;
+	font-size: 			17.2px;
+	font-family: 		"ArialRoundedMTBoldBold";
+	text-shadow: 		0px -1px 0px rgba(0, 0, 0, 0.72);
+	behavior: 			url(/assets/css/PIE.htc);
+	line-height:		19px;
+}
+
+.green-button-square {
+	border: 			0px;
+	background-image: 	url(/assets/green-button-square.png);
+	width: 				140px;
+	height: 			72px;
+	color: 				#FFF;
+	line-height: 		17px;
+	font-size: 			17.5px;
+	font-family: 		"ArialRoundedMTBoldBold";
+	text-shadow: 		0px -1px 0px rgba(28, 38, 18, 1);
+	behavior: 			url(/assets/css/PIE.htc);
+}
+
+.green-button-tiny {
+	border: 			0px;
+	background-image: 	url(/assets/green-button-tiny.png);
+	width: 				117px;
+	height: 			45px;
+	color: 				#FFF;
+	line-height: 		23px;
+	font-size: 			23.3px;
+	font-family: 		"ArialRoundedMTBoldBold";
+	text-shadow: 		0px -1px 0px rgba(28, 38, 18, 1);
+	behavior: 			url(/assets/css/PIE.htc);
+}
+
+.back-button {
+	border: 			0px;
+	border-radius: 		0px !important;
+	background: 		transparent url(/assets/back-button.png) no-repeat;
+	width: 				146px;
+	height: 			81px;
+	color: 				#525134;
+	line-height: 		23px;
+	font-size: 			14px;
+	font-family: 		"ArialRoundedMTBoldBold";
+	text-shadow: 		0px 1px 0px rgba(255, 255, 255, 0.49);
+	padding:			39px 0px 0px 28px;
+	behavior: 			url(/assets/css/PIE.htc);
+}
+
+.settings-button {
+	border: 			0px;
+	border-radius:		0px !important;
+	background: 		transparent url(/assets/settings-button.png) no-repeat;
+	width: 				80px;
+	height: 			76px;
+	color: 				#525134;
+	line-height: 		23px;
+	font-size: 			14px;
+	font-family: 		"ArialRoundedMTBoldBold";
+	text-shadow: 		0px 1px 0px rgba(255, 255, 255, 0.49);
+	padding:			44px 0px 0px 6px;
+	behavior: 			url(/assets/css/PIE.htc);
+}
+
+.back-button:hover, .settings-button:hover {
+	color: inherit;
+}
+
+.back-button:active, .settings-button:active {
+	box-shadow: none;
+}
+
+.custom-checkbox {
+	margin-left: -5px;
+	display: inline; 
+	font-size: 20px; 
+	line-height: 21px; 
+	cursor: pointer;
+}
+.custom-checkbox .mark {
+	display: inline;
+}
+
+.custom-checkbox img {
+	vertical-align: middle; 
+	width: 29px; 
+	height: 28px;
+}
+.custom-checkbox img{
+	background: transparent url(/assets/custom-checkbox.png) no-repeat;
+}
+
+.custom-checkbox img{
+	background-position: 0px 0px;
+}
+.custom-checkbox-checked img{
+	background: transparent url(/assets/custom-checkbox-checked.png) no-repeat;
+}
+
+p.details {
+	font-style: italic;
+	font-size: 	12.5px;
+	color: 		#868b7e;
+}
+
+a {
+	color: #49642f;
+}
+
+/* emoticons */
+*[class*='emoticon-'] {
+	display: inline-block;
+	background-image: url(/assets/emoticon.png);
+}
+
+.emoticon-bigsmile{ background-position: 0 0; width: 16px; height: 16px; } 
+.emoticon-evil{ background-position: 0 -17px; width: 16px; height: 16px; } 
+.emoticon-frown{ background-position: 0 -34px; width: 16px; height: 16px; } 
+.emoticon-glasses{ background-position: 0 -51px; width: 16px; height: 16px; } 
+.emoticon-heart{ background-position: 0 -68px; width: 15px; height: 14px; } 
+.emoticon-holy{ background-position: 0 -83px; width: 21px; height: 19px; } 
+.emoticon-kiss{ background-position: 0 -103px; width: 16px; height: 16px; } 
+.emoticon-mad{ background-position: 0 -120px; width: 16px; height: 16px; } 
+.emoticon-meh{ background-position: 0 -137px; width: 16px; height: 16px; } 
+.emoticon-noteven{ background-position: 0 -154px; width: 16px; height: 16px; } 
+.emoticon-purr{ background-position: 0 -171px; width: 18px; height: 18px; } 
+.emoticon-robot{ background-position: 0 -190px; width: 17px; height: 22px; } 
+.emoticon-sad{ background-position: 0 -213px; width: 16px; height: 16px; } 
+.emoticon-smile{ background-position: 0 -230px; width: 16px; height: 16px; } 
+.emoticon-sunglasses{ background-position: 0 -247px; width: 16px; height: 16px; } 
+.emoticon-tears{ background-position: 0 -264px; width: 16px; height: 16px; } 
+.emoticon-tongue{ background-position: 0 -281px; width: 16px; height: 16px; } 
+.emoticon-veryhappy{ background-position: 0 -298px; width: 16px; height: 16px; } 
+.emoticon-what{ background-position: 0 -315px; width: 16px; height: 16px; } 
+.emoticon-wink{ background-position: 0 -332px; width: 16px; height: 16px; } 
+.emoticon-woot{ background-position: 0 -349px; width: 16px; height: 16px; } 
+.emoticon-ohrly{ background-position: 0 -366px; width: 16px; height: 16px; } 
+
+
+/**
+	jScrollbar Adjustments
+**/
+.jspDrag {
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+/**
+	MAIN
+**/
+body {
+	background-image: url(/assets/background.png);
+	overflow-x: hidden;
+}
+
+.container-narrow {
+	margin: 		0px auto 0px auto;
+	padding-top:	10px;
+	min-width: 		1904px;
+	width: 			1904px;
+	overflow-x:		hidden;
+}
+
+#game {
+	width: 			1123px;
+	margin-right: 	-35px;
+	padding: 		0px 0px 0px 10px;
+}
+
+#wrapper {
+	padding-left: 30px;
+}
+
+#bingo {
+	height: 545px;
+	overflow: hidden;
+}
+
+/**
+	Statistics above the game card
+**/
+#statistics {
+	margin-top:		60px;
+	padding-left:	25px;
+	color: 			#FFF;
+}
+
+#statistics .stat {
+	padding: 		0px 0px 0px 0px;
+	font-family: 	"ArialRoundedMTBoldBold";
+	z-index: 		600;
+}
+
+#statistics .stat span {
+	float: 			left;
+	text-align: 	right;
+	width: 			80px;
+	height:			50px;
+	font-size:		15.8px;
+	padding:		5px 7px 0px 7px;
+	line-height: 	19px;
+	overflow: 		hidden;
+}
+
+#statistics .stat p {
+	float: 			right;
+	text-align: 	center;
+	width: 			96px;
+	height: 		46px;
+	padding:		5px 9px 0px 0px;
+	font-size:		19.7px;
+	line-height: 	37px;
+	overflow: 		hidden;
+}
+
+#statistics .stat.time {
+	background: url(/assets/timer-background.png) no-repeat;
+	width: 		143px;
+	height: 	64px;
+}
+
+#statistics .stat.pattern {
+	background: url(/assets/pattern-background.png) no-repeat;
+	width: 		236px;
+	height: 	63px;
+}
+
+#statistics .stat.pattern span {
+	color: 			#854112;
+	text-shadow: 	0px 1px 0px rgba(255, 255, 255, 0.37);
+	behavior: 		url(/assets/css/PIE.htc);
+}
+
+#statistics .stat.pattern p {
+	width: 			156px;
+	padding-right: 	10px;
+	text-shadow: 	0px 2px 0px rgba(0, 0, 0, 0.37);
+	behavior: 		url(/assets/css/PIE.htc);
+}
+
+#statistics .stat.total {
+	background: url(/assets/total-background.png) no-repeat;
+	width: 		223px;
+	height: 	63px;
+}
+
+#statistics .stat.total span {
+	color: 			#2d461a;
+	width:			66px;
+	text-shadow: 	0px 1px 0px rgba(255, 255, 255, 0.20);
+	behavior: 		url(/assets/css/PIE.htc);
+}
+
+#statistics .stat.total p {
+	width: 			157px;
+	padding-right: 	10px;
+	text-shadow: 	0px 2px 0px rgba(0, 0, 0, 0.37);
+	behavior: 		url(/assets/css/PIE.htc);
+}
+
+#statistics .stat.jackpot {
+	background: url(/assets/jackpot-background.png) no-repeat;
+	width: 		239px;
+	height: 	63px;
+}
+
+#statistics .stat.jackpot span {
+	color: 			#FFF;
+	width:			102px;
+	text-shadow: 	0px -1px 0px rgba(0, 0, 0, 1);
+	behavior: 		url(/assets/css/PIE.htc);
+}
+
+#statistics .stat.jackpot p {
+	width: 			137px;
+	padding-right: 	10px;
+	text-shadow: 	0px 2px 0px rgba(0, 0, 0, 0.37);
+	behavior: 		url(/assets/css/PIE.htc);
+}
+
+#statistics .stat.jackpot .top {
+	position: 	relative;
+	top: 		-39px;
+	left:		117px;
+	background: url(/assets/jackpot-top-background.png) no-repeat;
+	width: 		100px;
+	height: 	35px;
+}
+
+#statistics .stat.jackpot .top span {
+	float: 		left;
+	position: 	relative;
+	top: 		-50px;
+	left:		0px;
+	font-size:	15.9px;
+	padding:	0px;
+	width:		23px;
+	height:		27px;
+	text-align: center;
+	line-height:27px;
+	text-shadow:none;
+	behavior: 	url(/assets/css/PIE.htc);
+}
+
+#statistics .stat.jackpot .top p {
+	float: 		right;
+	position: 	relative;
+	top: 		-78px;
+	left:		-2px;
+	font-size:	15.9px;
+	padding: 	0px;
+	width:		78px;
+	height:		27px;
+	line-height:27px;
+	text-shadow:none;
+	behavior: 	url(/assets/css/PIE.htc);
+}
+
+#statistics .stat.jackpot .top .leftcoins {
+	position: relative;
+	top: -4px;
+	left: 6px;
+	width: 63px;
+	height: 32px;
+	background: url(/assets/jackpot-top-leftcoins.png);
+}
+
+#statistics .stat.jackpot .top .rightcoins {
+	position: relative;
+	top: -34px;
+	right: -25px;
+	width: 59px;
+	height: 46px;
+	background: url(/assets/jackpot-top-rightcoins.png);
+}
+
+/**
+	Game card
+**/
+#gamecard-container {
+	background:	url(/assets/gamecard-background.png);
+	width:		833px;
+	height:		399px;
+	margin-top:	15px;
+	margin-left:10px;
+	padding:	8px 0px 0px 11px;
+}
+
+#gamecard {
+	background-color: 		#2c4316;
+	border: 4px solid 		#FFF;
+	-webkit-border-radius: 	5px;
+	-moz-border-radius: 	5px;
+	border-radius: 			5px;
+	width:					814px;
+	height: 				370px;
+	padding:				5px;
+	behavior: 				url(/assets/css/PIE.htc);
+	z-index:				501;
+}
+
+#bingoLogo {
+	background: url(/assets/bingologo.png) no-repeat;
+	width:		32px;
+	height:		312px;
+	margin:		20px 0px 0px 8px;
+}
+
+#gamecard-numbers {
+	width:		750px;
+	list-style: none;
+	margin:		3px 0px 0px 0px;
+	padding:	0px;
+}
+
+#gamecard-numbers li {
+	background:		url(/assets/gamecard-number-background.png) repeat-x;
+	float: 			left;
+	width: 			50px;
+	height:			69px;
+	border:			1px solid #243712;
+	border-right:	0px;
+	border-bottom: 	0px;
+	font-family: 	"ArialRoundedMTBoldBold";
+	font-size: 		27px;
+	line-height: 	63px;
+	text-align: 	center;
+	color:			#000;
+	text-shadow: 	0px 2px 0px rgba(255, 255, 255, 0.17);
+}
+
+#gamecard-numbers li:nth-child(15n) {
+	border-right:	1px solid #243712;
+}
+
+#gamecard-numbers li:nth-child(n+61) {
+	border-bottom:	1px solid #243712;
+}
+
+#gamecard-numbers li.active {
+	color: 			#fc8d00;
+	text-shadow: 	0px 0px 13px rgba(255, 255, 190, 0.35), 0px 2px 3px rgba(0, 0, 0, 1);
+}
+
+#dispenser {
+	background: url(/assets/dispenser_background.png) no-repeat;
+	width:		242px;
+	height: 	500px;
+	float: 		right;
+	position: 	relative;
+	top:		-510px;
+	left: 		-54px;
+	z-index:	500;
+}
+
+#dispenser_spinnerbox {
+	position: 	absolute;
+	top:		12px;
+	left:		21px;
+	width:		209px;
+	height:		208px;
+	-webkit-border-radius: 103px;
+	-moz-border-radius: 103px;
+	border-radius: 103px;
+	overflow: hidden;
+}
+
+#dispenser_spinnerbox_canvas {
+	position: 	absolute;
+	width:		209px;
+	height:		208px;
+}
+
+#dispenser_spinnerbox .bingoball {
+	position: absolute;
+	background-position: center center;
+	background-repeat: no-repeat;
+	width: 37px;
+	height: 37px;
+	top: -10px;
+	left: -10px;
+}
+
+#dispenser_spinnerbox .bingoball.red {
+	background-image: url(/assets/dispenser_red_ball_small.png);
+}
+
+#dispenser_spinnerbox .bingoball.blue {
+	background-image: url(/assets/dispenser_blue_ball_small.png);
+}
+
+#dispenser_spinnerbox .bingoball.purple {
+	background-image: url(/assets/dispenser_purple_ball_small.png);
+}
+
+#dispenser_spinnerbox .bingoball.green {
+	background-image: url(/assets/dispenser_green_ball_small.png);
+}
+
+#dispenser_spinner {
+	position: 	absolute;
+	top:		5px;
+	left:		5px;
+	width:		198px;
+	height:		200px;
+	background: url(/assets/dispenser_spinner.png) no-repeat center center;
+	-webkit-animation: spinIt 6s infinite linear;
+    -moz-animation: spinIt 6s infinite linear;
+    z-index: 510;
+}
+
+@-webkit-keyframes spinIt {
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+@-moz-keyframes spinIt {
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+#dispenser_dropout {
+	position: 	absolute;
+	top:		209px;
+	left:		0px;
+	width:		242px;
+	height:		291px;
+	z-index: 	509;
+}
+
+/**
+	The bingocards section
+**/
+#cards {
+	width: 773px;
+}
+
+#cards-menu {
+	list-style: none;
+	height: 38px;
+	background: 			#4a6930; /* Old browsers */
+	background: 			-moz-linear-gradient(top, #537636 0%, #354b22 100%); /* FF3.6+ */
+	background: 			-webkit-gradient(linear, left top, left bottom, color-stop(0%,#537636), color-stop(100%,#354b22)); /* Chrome,Safari4+ */
+	background: 			-webkit-linear-gradient(top, #537636 0%,#354b22 100%); /* Chrome10+,Safari5.1+ */
+	background: 			-o-linear-gradient(top, #537636 0%,#354b22 100%); /* Opera 11.10+ */
+	background: 			-ms-linear-gradient(top, #537636 0%,#354b22 100%); /* IE10+ */
+	background: 			linear-gradient(to bottom, #537636 0%,#354b22 100%); /* W3C */
+	filter: 				progid:DXImageTransform.Microsoft.gradient( startColorstr='#537636', endColorstr='#354b22',GradientType=0 ); /* IE6-9 */
+	-webkit-border-radius: 	3px;
+	-moz-border-radius: 	3px;
+	border-radius: 			3px;
+	behavior: 				url(/assets/css/PIE.htc);
+	padding-right: 			6px;
+	font-family: 			"ArialRoundedMTBoldBold";
+	font-size: 				15.8px;
+	color: 					#c3dfa8;
+	text-shadow: 			0px -1px 0px rgba(0, 0, 0, 1);
+}
+
+#cards-menu li {
+	float: 			right;
+	margin-left: 	10px;
+	display: 		table;
+	height: 		inherit;
+}
+
+#cards-menu li.divider {
+	border-left: 1px solid #354c23;
+}
+
+#cards-menu li > div {
+	display: 		table-cell;
+	vertical-align: middle;
+	height: 		inherit;
+}
+
+#cards-menu li .counter {
+	display: 		inline-block;
+	background: 	url(/assets/cards-counter-background.png) no-repeat;
+	width: 			58px;
+	height: 		29px;
+	font-family: 	"ArialRoundedMTBoldBold";
+	font-size: 		22.3px;
+	text-align: 	center;
+	color: 			#FFF;
+	text-shadow: 	0px 2px 0px rgba(0, 0, 0, 0.37);
+}
+
+#gamecards-container {
+	height: 490px;
+}
+
+#gamecards-container ul {
+	list-style: none;
+	margin: 	0px 0px 0px -4px;
+	padding: 	0;
+}
+
+#gamecards .small-gamecard-container {
+	width: 780px;
+	height: 500px;
+	float: left;
+}
+
+#gamecards .small-gamecard-container .small-gamecard {
+	background: url(/assets/small-gamecard-background.png) no-repeat;
+	width: 		188px;
+	height: 	210px;
+	margin:		0px 0px 0px 7px;
+	padding: 	42px 0px 0px 10px;
+}
+
+#gamecards .small-gamecard-container .small-gamecard:nth-child(n+5) {
+	margin-top: 5px;
+}
+
+#gamecards .small-gamecard-container .small-gamecard.unbought {
+	background: url(/assets/small-gamecard-unbought-background.png) no-repeat;
+}
+
+#gamecards .small-gamecard-container .small-gamecard li {
+	float: 			left;
+	width: 			33px;
+	height: 		31px;
+	background: 	url(/assets/small-gamecard-item-background.png) no-repeat;
+	margin: 		1px 1px 0px 0px;
+	text-align: 	center;
+	font-family: 	"ArialRoundedMTBoldBold";
+	font-size: 		17px;
+	color: 			#4b6631;
+	text-shadow:	0px 2px 0px rgba(255, 255, 255, 0.61);
+	line-height: 	30px;
+}
+
+#gamecards .small-gamecard-container .small-gamecard li.checked {
+	background:		url(/assets/small-gamecard-item-checked.png) no-repeat;
+	color:			#FFF;
+	text-shadow:	0px -1px 0px rgba(0, 0, 0, 0.31);
+}
+
+#gamecards .small-gamecard-container .small-gamecard li.star {
+	background:		url(/assets/small-gamecard-item-star.png) no-repeat;
+	color:			#FFF;
+	text-shadow:	0px -1px 0px rgba(0, 0, 0, 0.31);
+}
+
+#gamecards .small-gamecard-container .small-gamecard.unbought li {
+	background: none;
+	text-align: center;
+	width: 		165px;
+	height: 	156px;
+	line-height:135px;
+}
+
+#gameCardsScrollbar {
+	width: 		100%;
+	height: 	40px;
+	margin-top: -50px;
+}
+
+#gameCardsScrollbar .scrollbar {
+	position: 			relative;
+	top: 				19px;
+	background-image: 	url(/assets/gamecards-scrollbar-background.png);
+	background-repeat:	no-repeat;
+	background-position:0px 0px;
+	height:				12px;
+	width:				735px;
+	margin:				0px 0px 0px -29px;
+	line-height: 		0;
+	z-index: 			100;
+}
+
+#gameCardsScrollbar .scrollbar .handle {
+	position: 				relative;
+	top: 					-10px;
+	width: 					100px;
+	height: 				100%;
+	cursor: 				pointer;
+	height:					39px;
+	width: 					40px;
+	background-image: 		url(/assets/gamecards-scrollbar-handle.png);
+	background-repeat: 		no-repeat;
+	background-position: 	0px 0px;
+	z-index: 				210;
+}
+
+#gameCardsScrollbar .scrollLeft, #gameCardsScrollbar .scrollRight {
+	position: 			relative;
+	top: 				4px;
+	left: 				-12px;
+	height: 			47px;
+	width: 				47px;
+	background-image: 	url(/assets/gamecards-scrollbar-left.png);
+	background-repeat: 	no-repeat;
+	background-position:0px 0px;
+	z-index: 			200;
+	cursor: 			pointer;
+}
+
+#gameCardsScrollbar .scrollRight {
+	top: -7px;
+	left: 6px;
+	background-image: url(/assets/gamecards-scrollbar-right.png);
+}
+
+#information {
+	background: url(/assets/text-slider-background.png) no-repeat;
+	padding: 12px 12px 9px 16px;
+	width: 1904px;
+	height: 74px;
+	overflow: hidden;
+}
+
+#information #infoScroller {
+	width: 1875px;
+	height: 52px;
+	margin: 0;
+	padding: 0;
+}
+
+#information .section {
+	float: left;
+	width: auto;
+	height: inherit;
+}
+
+#information .section p {
+	display: 	 inline-block;
+	padding: 	 15px 0px 0px 0px;
+	color: 		 #e6d0b7;
+	font-family: "ArialRoundedMTBoldBold";
+	font-size: 	 20px;
+	text-shadow: 0px 1px 6px rgba(0,0,0,0.88);
+	margin: 	 0;
+}
+
+#information .section .divider {
+	background: url(/assets/text-slider-divider.png) no-repeat center center;
+	width: 36px;
+	height: 20px;
+	display: inline-block;
+	position: relative;
+	top: 4px;
+}
+
+#players {
+	background: url(/assets/red-carpet.jpg) no-repeat;
+	width: 1904px;
+	height: 1030px;
+	max-height: 1030px;
+}
+
+#players #tables {
+	height: 0px;
+}
+
+#players .table {
+	width: 309px;
+	height: 380px;
+	float: left;
+	margin-left: 46px;
+}
+
+#players #topRow {
+	position: relative;
+	top: -83px;
+	left: 70px;
+	width: 1785px;
+	height: 400px;
+	z-index: 1;
+}
+
+#players #middleRow {
+	position: relative;
+	top: -190px;
+	left: 285px;
+	width: 1425px;
+	height: 400px;
+	z-index: 10;
+}
+
+#players #bottomRow {
+	position: relative;
+	top: -260px;
+	left: 0px;
+	width: 720px;
+	height: 400px;
+	overflow: hidden;
+	z-index: 20;
+}
+
+#entrance {
+	position: absolute;
+	top: 715px;
+	left: 5px;
+	width: 200px;
+	height: 600px;
+	overflow: hidden;
+}
+
+#entrance #carpet {
+	position: relative;
+	top: 25px;
+	background: url(/assets/entrance_carpet.png) no-repeat;
+	width: 200px;
+	height: 305px;
+}
+
+#entrance #topPillar, #entrance #bottomPillar {
+	position: relative;
+	top: 0px;
+	left: 10px;
+	width: 103px;
+	height: 250px;
+	background: url(/assets/entrance_pillar.png) no-repeat;
+	z-index: 0;
+}
+
+#entrance #bottomPillar {
+	top: -185px;
+	z-index: 10;
+}
+
+#footer {
+	position: absolute;
+	bottom: 774px;
+	width: 1904px;
+	height: 0;
+}
+
+#footer #settingsButton {
+	position: relative;
+	left: 1808px;
+	top: 150px;
+	overflow: hidden;
+}
+
+#footer #menu {
+	position: 	relative;
+	top: 		600px;
+	background: url(/assets/footer-menu-background.png) no-repeat;
+	width: 		663px;
+	height: 	98px;
+	margin: 	0;
+	padding: 	4px 0 0 10px;
+	list-style:	none;
+	overflow: 	hidden;
+}
+
+#footer #menu li {
+	width: 				107px;
+	height: 			79px;
+	padding-right:		3px;
+	float: 				left;
+	color: 				#FFF;
+	font-family: 		"ArialRoundedMTBoldBold";
+	font-size: 	 		17.2px;
+	text-align: 		center;
+	text-shadow: 		0px -1px 0px rgba(0, 0, 0, 0.75);
+	behavior: 			url(/assets/css/PIE.htc);
+	background: url(/assets/footer-menu-border.png) no-repeat right center;
+}
+
+#footer #menu li:last-child {
+	background: none;
+}
+
+#footer #menu li a {
+	color: inherit;
+}
+
+#footer #menu li a:hover {
+	text-decoration: none;
+}
+
+#footer #menu li div {
+	min-width: 				inherit;
+	min-height: 			inherit;
+	display: 				block;
+	text-decoration: 		none;
+	color: 					inherit;
+	z-index: 				100;
+}
+
+#footer #menu li div *[class$='-icon'], #footer #menu li div .sound-icon {
+	width: 				inherit;
+	height: 			inherit;
+	background-position:center 13px;
+	background-repeat: 	no-repeat;
+	padding-top: 		55px;
+	line-height: 		15px;
+}
+
+#footer #menu li div .warning-icon {
+	background-image: url(/assets/footer-menu-warning.png);
+}
+
+#footer #menu li div .info-icon {
+	background-image: 		url(/assets/footer-menu-info.png);
+	background-position: 	center 15px;
+}
+
+#footer #menu li div .rocket-icon {
+	background-image: 		url(/assets/footer-menu-rocket.png);
+	background-position: 	center 16px;
+}
+
+#footer #menu li div .money-icon {
+	background-image: url(/assets/footer-menu-money.png);
+}
+
+#footer #menu li div .sound-icon {
+	background-image: 	url(/assets/footer-menu-muted.png);
+}
+
+#footer #menu li div .sound-icon.muted {
+	background-image: 	url(/assets/footer-menu-muted.png);
+}
+
+#footer #menu li div .fullscreen-icon {
+	background-image: 		url(/assets/footer-menu-fullscreen.png);
+	background-position: 	center 18px;
+}
+
+#footer #userbox {
+	position: 	relative;
+	width: 		315px;
+	height: 	334px;
+	left: 		725px;
+	top: 		215px;
+	background: url(/assets/userbox-background.png) no-repeat;
+	z-index: 1000;
+}
+
+#footer #userbox h3 {
+	position: 		relative;
+	top: 			13px;
+	left: 			15px;
+	color: 			#FFF;
+	font-family: 	"ArialRoundedMTBoldBold";
+	font-size: 		20px;
+	text-shadow: 	0px -1px 0px rgba(0, 0, 0, 0.72);
+}
+
+#footer #userbox #earnings {
+	position: relative;
+	top: 20px;
+	left: 5px;
+	height: 32px;
+}
+
+#footer #userbox #earnings .earning {
+	background: url(/assets/userbox-earnings.png) no-repeat;
+	width: 		151px;
+	height: 	32px;
+	padding: 	3px 0px 0px 54px;
+	font-family:"ArialRoundedMTBoldBold";
+	font-size: 	17.6px;
+	text-shadow:0px -1px 0px rgba(0, 0, 0, 0.53);
+	color: 		#FFF;
+	float: 		left;
+}
+
+#footer #userbox #earnings .earning.bonus {
+	background-image: url(/assets/userbox-bonus.png);
+	margin-left: 3px;
+}
+
+#footer #userbox #earnings .earning .top {
+	position: 	relative;
+	top: 		-74px;
+	left:		-6px;
+	background: url(/assets/userbox-bonus-top.png) no-repeat;
+	width: 		100px;
+	height: 	34px;
+}
+
+#footer #userbox #earnings .earning .top span {
+	float: 		left;
+	position: 	relative;
+	top: 		0px;
+	left:		0px;
+	font-size:	15.9px;
+	padding:	0px;
+	width:		23px;
+	height:		27px;
+	text-align: center;
+	line-height:27px;
+	text-shadow:none;
+	behavior: 	url(/assets/css/PIE.htc);
+}
+
+#footer #userbox #earnings .earning .top p {
+	float: 		right;
+	position: 	relative;
+	top: 		0px;
+	left:		0px;
+	font-size:	15.9px;
+	padding: 	0px;
+	width:		77px;
+	height:		27px;
+	line-height:27px;
+	text-align: center;
+	text-shadow:none;
+	color:		#324e1d;
+	behavior: 	url(/assets/css/PIE.htc);
+}
+
+#footer #userbox #users {
+	position: relative;
+	top: 15px;
+	left: 0px;
+}
+
+#footer #userbox #users .nav-tabs {
+	padding-top: 10px;
+	overflow: hidden;
+}
+
+#footer #userbox #users .nav-tabs li {
+	width: 162px;
+	height: 31px;
+	padding: 1px 0px 0px 0px;
+	margin: 0;
+	float: right;
+	z-index: 200;
+}
+
+#footer #userbox #users .nav-tabs li.active {
+	width: 162px;
+	height: 36px;
+	padding: 0;
+	z-index: 250;
+}
+
+#footer #userbox #users .nav-tabs li:first-child {
+	margin-left: -14px;
+	margin-right: 0px;
+}
+
+#footer #userbox #users .nav-tabs li:last-child {
+	margin-right: 5px;
+}
+
+#footer #userbox #users .nav-tabs li a {
+	background: transparent url(/assets/userbox-tab-background.png) no-repeat;
+	width: inherit;
+	height: inherit;
+	border: 3px solid transparent;
+	border-bottom: 0px;
+	-webkit-border-top-left-radius: 9px;
+	-webkit-border-top-right-radius: 9px;
+	-moz-border-radius-topleft: 9px;
+	-moz-border-radius-topright: 9px;
+	border-top-left-radius: 9px;
+	border-top-right-radius: 9px;
+	font-family:"ArialRoundedMTBoldBold";
+	font-size: 	18px;
+	color: #FFF;
+	line-height: 14px;
+}
+
+#footer #userbox #users .nav-tabs li a:hover {
+	color: #FFF;
+}
+
+#footer #userbox #users .nav-tabs li.active a {
+	border: 3px solid #FFF;
+	border-bottom: 0px;
+	background-color: #FFF;
+	-webkit-box-shadow: 0px -1px 10px rgba(50, 50, 50, 1);
+	-moz-box-shadow:    0px -1px 10px rgba(50, 50, 50, 1);
+	box-shadow:         0px -1px 10px rgba(50, 50, 50, 1);
+}
+
+#footer #userbox #users .tab-content {
+	position: relative;
+	top: -5px;
+	background: #FFF;
+	width: 315px;
+	height: 216px;
+	border: 3px solid #FFF;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+}
+
+#footer #userbox #users .tab-content .tab-pane {
+	width: 309px;
+	height: 209px;
+}
+
+#footer #userbox #users .tab-content .tab-pane .jspPane {
+	width: 309px !important;
+}
+
+#footer #userbox #users .tab-content .tab-pane .jspVerticalBar {
+	right: 1px;
+}
+
+#footer #userbox #users .tab-content .tab-pane .jspDrag {
+	background: #686868;
+}
+
+#footer #userbox #users ul.friendsContainer {
+	padding: 	0;
+	list-style: none;
+	height:		auto;
+}
+
+#footer #userbox #users ul.friendsContainer li.friend {
+	margin: 			0;
+	padding: 			0;
+	height: 			42px;
+	width:				100%;
+	border: 			1px solid #9cd366;
+	border-bottom: 		0px;
+	background-image: 	url(/assets/friendlist-user-offline-background.png);
+	background-repeat: 	repeat-x;
+	cursor:				pointer;
+}
+
+#footer #userbox #users ul.friendsContainer li.friend.online {
+	background-image: url(/assets/friendlist-user-online-background.png);
+}
+
+#footer #userbox #users ul.friendsContainer li.friend:first-child {
+	-webkit-border-top-left-radius: 	3px;
+	-webkit-border-top-right-radius: 	3px;
+	-moz-border-radius-topleft: 		3px;
+	-moz-border-radius-topright: 		3px;
+	border-top-left-radius: 			3px;
+	border-top-right-radius: 			3px;
+	behavior: 							url(/assets/css/PIE.htc);
+}
+
+#footer #userbox #users ul.friendsContainer li.friend:last-child {
+	border-bottom: 						1px solid #9cd366;
+	-webkit-border-bottom-right-radius: 3px;
+	-webkit-border-bottom-left-radius: 	3px;
+	-moz-border-radius-bottomright: 	3px;
+	-moz-border-radius-bottomleft: 		3px;
+	border-bottom-right-radius: 		3px;
+	border-bottom-left-radius: 			3px;
+	behavior: 							url(/assets/css/PIE.htc);
+}
+
+
+#footer #userbox #users ul.friendsContainer li.friend div {
+	float: left;
+	height: 42px;
+}
+
+#footer #userbox #users ul.friendsContainer li.friend div.divider {
+	width: 					4px;
+	height: 				42px;
+	background-image: 		url(/assets/friendlist-user-divider.png);
+	background-repeat: 		no-repeat;
+	background-position: 	0px 0px;
+	cursor:					default;
+}
+
+#footer #userbox #users ul.friendsContainer li.friend.online div.divider {
+	background-position: 0px -42px;
+}
+
+#footer #userbox #users ul.friendsContainer li.friend div.status {
+	background-image: 		url(/assets/status.png);
+	background-repeat: 		no-repeat;
+	background-position: 	0px 0px;
+	height: 				15px;
+	width: 					15px;
+	margin: 				13px 5px 0px 12px;
+}
+
+#footer #userbox #users ul.friendsContainer li.friend.online div.status {
+	background-position: 0px -15px;
+}
+
+#footer #userbox #users ul.friendsContainer li.friend div.name {
+	margin: 			10px 0px 0px 0px;
+	padding:			0;
+	width:				168px;
+	height:				19px;
+	text-align: 		left;
+	color: 				#161616;
+	font-family: 		arial;
+	font-weight: 		bold;
+	font-size: 			16.8px;
+}
+
+#footer #userbox #users ul.friendsContainer li.friend.online div.name {
+	background-position:140px 0px;
+}
+
+#footer #userbox #users ul#friendList ul.friendsContainer li.friend div.inviteGame {
+	margin: 			6px 5px 0px 5px;
+	padding:			0;
+	width:				32px;
+	height:				26px;
+	background-image: 	url(/assets/friendlist-user-game.png);
+	background-position:0px 0px;
+	background-repeat: 	no-repeat;
+}
+
+#footer #userbox #users ul#friendList ul.friendsContainer li.friend.online div.inviteGame {
+	background-position:0px -26px;
+}
+
+#footer #userbox #users ul#friendList ul.friendsContainer li.friend div.removeFriend {
+	margin: 			6px 5px 0px 5px;
+	padding:			0;
+	width:				29px;
+	height:				30px;
+	background-image: 	url(/assets/friendlist-user-remove.png);
+	background-position:center center;
+	background-repeat: 	no-repeat;
+}
+
+#chatBox {
+	position: relative;
+	top: -119px;
+	left: 1050px;
+	overflow: hidden;
+	width: 820px;
+	height: 336px;
+	z-index: 1000;
+}
+
+#chatBox .row {
+	margin: 0;
+}
+
+#chatTabs {
+	position: 	relative;
+	top:		1px;
+	left:		0px;
+	border-bottom: 0px;
+}
+
+#chatTabs li {
+	margin-bottom: 0px;
+}
+
+#chatTabs li a {
+	height:			29px;
+	min-width: 		155px;
+	padding: 		0px 13px 1px 13px;
+	background: 	#e5e3a8; /* Old browsers */
+	background: 	-moz-linear-gradient(top, #e5e3a8 0%, #d4d17e 100%); /* FF3.6+ */
+	background: 	-webkit-gradient(linear, left top, left bottom, color-stop(0%,#e5e3a8), color-stop(100%,#d4d17e)); /* Chrome,Safari4+ */
+	background: 	-webkit-linear-gradient(top, #e5e3a8 0%,#d4d17e 100%); /* Chrome10+,Safari5.1+ */
+	background: 	-o-linear-gradient(top, #e5e3a8 0%,#d4d17e 100%); /* Opera 11.10+ */
+	background: 	-ms-linear-gradient(top, #e5e3a8 0%,#d4d17e 100%); /* IE10+ */
+	background: 	linear-gradient(to bottom, #e5e3a8 0%,#d4d17e 100%); /* W3C */
+	filter: 		progid:DXImageTransform.Microsoft.gradient( startColorstr='#e5e3a8', endColorstr='#d4d17e',GradientType=0 ); /* IE6-9 */	
+	font-family:	"ArialRoundedMTBoldBold";
+	font-size:		17.5px;
+	color:			#3c3c23;
+	text-align: 	center;
+	z-index: 		100;
+}
+
+#chatTabs li.active a {
+	border: 		3px solid #FFF;
+	border-bottom: 	0px;
+	z-index: 		110;
+	top:			-1px;
+}
+
+#chatTabs li a span:nth-child(1) {
+	float: 		left;
+	text-align: left;
+	min-width: 	113px;
+	height: 	inherit;
+	display: 	block;
+}
+
+#chatTabs li a span:nth-child(2) {
+	float: 				right;
+	background-image: 	url(/assets/chat_close.png);
+	height:				17px;
+	width: 				16px;
+	display: 			block;
+	position: 			relative;
+	top:				5px;
+}
+
+#chatContent {
+	position:							relative;
+	top:								-3px;
+	width:								inherit;
+	height:								307px;
+	padding:							3px;
+	margin:								0px 0px 0px 0px;
+	border-top: 						2px solid #FFF;
+	background-color: 					#f8f7d6;
+	-webkit-border-radius: 				6px;
+	-webkit-border-top-left-radius: 	0;
+	-moz-border-radius: 				6px;
+	-moz-border-radius-topleft: 		0;
+	border-radius: 						6px;
+	border-top-left-radius: 			0;
+	z-index: 							105;
+	box-shadow: 						0px 1px 10px #000 !important;
+}
+
+#chatContent .tab-content {
+	width:		817px;
+	height:		226px;
+	overflow: 	hidden;
+	padding: 	0;
+}
+
+#chatContent .tab-pane {
+	width:		inherit;
+	height:		inherit;
+	padding: 	10px 25px 5px 15px;
+}
+
+#chatBox .jspContainer {
+	width: 		813px !important;
+	height:		213px !important;
+}
+
+#chatBox .jspPane {
+	width: 		830px !important;
+}
+
+#chatContent #createMessage {
+	position: 								relative;
+	left: 									1px;
+	height:									72px;
+	width:									811px;
+	background: 							#eceab1; /* Old browsers */
+	background: 							-moz-linear-gradient(top, #eceab1 0%, #d7d587 100%); /* FF3.6+ */
+	background: 							-webkit-gradient(linear, left top, left bottom, color-stop(0%,#eceab1), color-stop(100%,#d7d587)); /* Chrome,Safari4+ */
+	background: 							-webkit-linear-gradient(top, #eceab1 0%,#d7d587 100%); /* Chrome10+,Safari5.1+ */
+	background: 							-o-linear-gradient(top, #eceab1 0%,#d7d587 100%); /* Opera 11.10+ */
+	background: 							-ms-linear-gradient(top, #eceab1 0%,#d7d587 100%); /* IE10+ */
+	background: 							linear-gradient(to bottom, #eceab1 0%,#d7d587 100%); /* W3C */
+	filter: 								progid:DXImageTransform.Microsoft.gradient( startColorstr='#eceab1', endColorstr='#d7d587',GradientType=0 ); /* IE6-9 */	
+	-webkit-border-bottom-right-radius: 	6px;
+	-webkit-border-bottom-left-radius: 		6px;
+	-moz-border-radius-bottomright: 		6px;
+	-moz-border-radius-bottomleft: 			6px;
+	border-bottom-right-radius: 			6px;
+	border-bottom-left-radius: 				6px;
+}
+
+#chatContent #createMessage #messageField {
+	width: 					700px;
+	height: 				53px;
+	border: 				1px solid #b9b568;
+	-webkit-border-radius: 	3px;
+	-moz-border-radius: 	3px;
+	border-radius: 			3px;
+	box-shadow: 			inset 0px 4px 12px #CCC !important;
+	padding:				0px 50px 0px 10px;
+	margin:					10px 0px 0px -5px;
+	behavior: 				url(/assets/css/PIE.htc);
+	float: left;
+}
+
+#chatContent #createMessage #selectEmoticon {
+	position: 			relative;
+	top:				10px;
+	left:				-59px;
+	background-color: 	transparent;
+	border: 			0;
+	width:				63px;
+	height:				52px;
+}
+
+#chatBox .popover {
+	max-width: 				1000px;
+	width: 					332px;
+	left: 					485.5px !important;
+	padding: 				0px;
+	border:					2px solid #eae8ab;
+	border-bottom: 			1px solid #eae8ab;
+	-webkit-box-shadow: 	0px 5px 10px rgba(83, 70, 70, 0.9);
+	box-shadow: 			0px 5px 10px rgba(83, 70, 70, 0.9);
+}
+
+#chatBox .popover .arrow {
+	background-image: 	url(/assets/emoticon-select-menu-arrow.png);
+	left: 				205px !important;
+	bottom: 			-23px !important;
+	width: 				33px;
+	height: 			23px;
+	padding: 			0px;
+	background-color: 	transparent;
+	border: 			0;
+}
+
+#chatBox .popover.top .arrow:after {
+	border-top-color:	transparent;
+}
+
+#chatBox .popover .col-1 {
+	width: 		27px;
+	padding: 	6px 0px;
+	text-align: center;
+	cursor:		pointer;
+}
+
+#chatBox .popover span {
+	display: 		block;
+	font-family: 	arial;
+	font-weight: 	bold;
+	font-size: 		11px;
+}
+
+#chatBox #sendChatMessage {
+	position: relative;
+	top: -44px;
+	left: 7px;
+	float: right;
+}
+
+#chatBox .message {
+	font-family: 	arial;
+	font-weight: 	normal;
+	padding-bottom: 15px;
+}
+
+#chatBox .message .name {
+	font-size: 		15.56px;
+	font-weight: 	bold;
+	color: 			#ff7100;
+	width: 			105px;
+}
+
+#chatBox .message .text {
+	font-size:	15.5px;
+	width: 		615px;
+	color: 		#3c3c3c;
+}
+
+#chatBox .message .time {
+	font-size: 		13.6px;
+	color: 			#afad79;
+	margin-right:	3px;
+}
+
+#winnerModalDutch .modal-dialog, #winnerModalEnglish .modal-dialog {
+	background: url(/assets/winner_background_nl.png) no-repeat;
+	width: 1789px;
+	height: 1332px;
+}
+
+#winnerModalEnglish .modal-dialog {
+	background: url(/assets/winner_background_en.png) no-repeat;
+}
+
+#winnerModalDutch .modal-content, #winnerModalEnglish .modal-content {
+	box-shadow: none;
+	background-color: transparent;
+	border: 0px;
+	padding: 589px 275px 0px 355px;
+}
+
+#winnerModalDutch .modal-header, #winnerModalEnglish .modal-header {
+	border: 0px;
+}
+
+#winnerModalDutch .modal-body, #winnerModalEnglish .modal-body {
+	padding: 5px;
+}
+
+#winnerModalDutch .close, #winnerModalEnglish .close {
+	background-image: url(/assets/winner_modal_close.png);
+	width: 18px;
+	height: 21px;
+	opacity: 1;
+}
+
+#winnerModalDutch .winner {
+	background: url(/assets/winner_player_background.png);
+	width: 571px;
+	height: 138px;
+	padding: 19px;
+	margin-top: -5px;
+}
+
+#winnerModalDutch .winner:nth-child(even) {
+	margin-left: -24px;
+}
+
+#winnerModalDutch .winner:nth-child(n+3) {
+	margin-top: -28px;
+}
