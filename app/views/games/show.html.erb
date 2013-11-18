@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Room:</b>
+  <%= @game.room %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @game.status %>
+</p>
+
+<p>
+  <b>B pattern:</b>
+  <%= @game.b_pattern %>
+</p>
+
+<p>
+  <b>I pattern:</b>
+  <%= @game.i_pattern %>
+</p>
+
+<p>
+  <b>N pattern:</b>
+  <%= @game.n_pattern %>
+</p>
+
+<p>
+  <b>G pattern:</b>
+  <%= @game.g_pattern %>
+</p>
+
+<p>
+  <b>O pattern:</b>
+  <%= @game.o_pattern %>
+</p>
+
+
+<%= link_to 'Edit', edit_game_path(@game) %> |
+<%= link_to 'Back', games_path %>

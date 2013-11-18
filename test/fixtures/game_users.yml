@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  game: 
+  user: 
+  winner_id: 1
+  card_match_winner_integer: 1
+
+two:
+  game: 
+  user: 
+  winner_id: 1
+  card_match_winner_integer: 1

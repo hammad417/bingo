@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BingoShot</title>
+
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        //Create instances for all of the tables
+        Tables.addTable(new Table(1));
+        Tables.addTable(new Table(2));
+        Tables.addTable(new Table(3));
+        Tables.addTable(new Table(4));
+        Tables.addTable(new Table(5));
+        Tables.addTable(new Table(6));
+        Tables.addTable(new Table(7));
+        Tables.addTable(new Table(8));
+        Tables.addTable(new Table(9));
+        Tables.addTable(new Table(10));
+        Tables.addTable(new Table(11));
+
+        //Add our players to the game
+        Players.addPlayer(new Player({
+                    id: 1,
+                    name: "spelernaam",
+                    gender: "female",
+                    avatar: {
+                      head: 0,
+                      body: 0,
+                      bottom: 0
+                    }
+                  }));
+
+        Players.addPlayer(new Player({
+                    id: 2,
+                    name: "spelernaam",
+                    gender: "male",
+                    avatar: {
+                      head: 0,
+                      body: 0,
+                      bottom: 0
+                    }
+                  }));
+
+        Players.addPlayer(new Player({
+                    id: 3,
+                    name: "spelernaam",
+                    gender: "male",
+                    avatar: {
+                      head: 0,
+                      body: 0,
+                      bottom: 0
+                    }
+                  }));
+
+        Players.addPlayer(new Player({
+                    id: 4,
+                    name: "spelernaam",
+                    gender: "female",
+                    avatar: {
+                      head: 0,
+                      body: 0,
+                      bottom: 0
+                    }
+                  }));
+
+        //Example: adding players to the queue (for example when they join the game room)
+        Character.newPlayer(1, 1);
+        Character.newPlayer(1, 4);
+        Character.newPlayer(1, 1);
+        Character.newPlayer(1, 4);
+
+        Character.newPlayer(2, 2);
+        Character.newPlayer(2, 3);
+        Character.newPlayer(2, 2);
+        Character.newPlayer(2, 3);
+      });
+    </script>
+    <!-- einde van bestanden & scripts voor karakters & tafels -->
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+
+  <body>
+    <div class="container-narrow">
+      <div class="row">
+        <div id="wrapper" class="col-12">
+          <section id="bingo" class="row">
+            <div id="game" class="col-7">
+              <div id="statistics" class="row">
+                <div class="col-3 stat time">
+                  <p>1:35:44</p>
+                </div>
+
+                <div class="col-3 stat pattern">
+                  <span>Pattern Price</span>
+                  <p>$ 123</p>
+                </div>
+
+                <div class="col-3 stat total">
+                  <span>Total Price</span>
+                  <p>$ 4,123</p>
+                </div>
+
+                <div class="col-3 stat jackpot">
+                  <span>Jackpot Price</span>
+                  <p>$ 123</p>
+                  <div class="top">
+                    <span>+</span>
+                    <p>$ 100,00</p>
+                    <div class="leftcoins"></div>
+                    <div class="rightcoins"></div>
+                  </div>
+                </div>
+                <!-- animatie voor de +100, inhoud van .click() verplaatsen naar eigen code wanneer het event plaatsvind -->
+                <script type="text/javascript">
+                $(document).ready(function(){
+                  $(".top").click(function(){
+                    var item = $(this);
+                    item.hide();
+                    /*
+                    //reset animation
+                    item.hide().css('top', '+=20');
+
+                    item.fadeIn(500).animate({
+                      'top': '-=20'
+                    }, {
+                      duration: 500, 
+                      queue: false
+                    }, function() {
+                      // Animation complete.
+                    });*/
+
+                    item.show().css({
+                      scale: 0
+                    }).transition({
+                      scale: 1
+                    });
+
+                    //move coins
+                    item.find(".leftcoins").css({
+                      rotate: 0,
+                      top: 30,
+                      left: 0
+                    }).transition({
+                      rotate: -50,
+                      x: -20,
+                      y: -65,
+                      duration: 450,
+                      complete: function(){
+                        $(this).fadeOut(300);
+                      }
+                    });
+                    item.find(".rightcoins").css({
+                      rotate: 0,
+                      top: 0,
+                      left: 0
+                    }).transition({
+                      rotate: 50,
+                      x: 50,
+                      y: -110,
+                      duration: 450,
+                      complete: function(){
+                        $(this).fadeOut(300);
+                      }
+                    });
+
+                    setTimeout(function(){
+                      item.find(".leftcoins").show().css({
+                        rotate: 0,
+                        top: 50,
+                        left: 50
+                      }).transition({
+                        rotate: -30,
+                        x: -80,
+                        y: -115,
+                        duration: 500,
+                        complete: function(){
+                          $(this).fadeOut(400);
+                        }
+                      });
+                      item.find(".rightcoins").show().css({
+                        rotate: 0,
+                        top: 80,
+                        left: 0
+                      }).transition({
+                        rotate: 30,
+                        x: 30,
+                        y: -165,
+                        duration: 500,
+                        complete: function(){
+                          $(this).fadeOut(400);
+                        }
+                      });
+
+                      setTimeout(function(){
+                        item.fadeOut(400);
+                      }, 1000);
+                    }, 850);
+                  });
+                });
+                </script>
+              </div>
+
+              <div id="gamecard-container" class="row">
+                <section id="gamecard" class="col-12">
+                  <div class="pull-left" id="bingoLogo"></div>
+                  <ul class="pull-right" id="gamecard-numbers">
+                  </ul>
+                  <script type="text/javascript">
+                  for(var i = 1; i < 76; i++) {
+                    var myChance = new Chance();
+                    var addon = (myChance.bool()) ? 'active' : '';
+
+                    $("#gamecard-numbers").append('<li class="'+addon+'">'+i+'</li>');
+                  }
+                  </script>
+                </section>
+              </div>
+
+              <div id="dispenser">
+                <div id="dispenser_spinnerbox">
+                  <canvas id="dispenser_spinnerbox_canvas"></canvas>
+                  <div id="dispenser_spinner"></div>
+                </div>
+                <canvas id="dispenser_dropout"></canvas>
+              </div>
+              <script type="text/javascript">
+                $(document).ready(function(){
+                  $("#dispenser").bingoDispenser({
+                    canvas: "#dispenser_dropout"
+                  });
+                });
+              </script>
+            </div>
+
+            <section id="cards" class="col-5">
+              <div class="row">
+                <ul id="cards-menu" class="col-12">
+                  <li>
+                    <div>
+                      <div class="btn-group">
+                        <button type="button" class="btn orange-button-dropdown dropdown-toggle" data-toggle="dropdown">Buy Card!</button>
+                        <ul class="dropdown-menu">
+                          <li><a href="#">Dropdown link</a></li>
+                          <li><a href="#">Dropdown link</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <input type="checkbox" data-checkbox="custom" CHECKED /> Auto Buy
+                    </div>
+                  </li>
+                  <li class="divider"></li>
+                  <li>
+                    <div>
+                      Cards Bought <div class="counter">999</div>
+                    </div>
+                  </li>
+                  <li class="divider"></li>
+                  <li>
+                    <div>
+                      Cards Available <div class="counter">999</div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div id="gamecards" class="row">
+                <div id="gamecards-container">
+                  <ul>
+                    <li class="small-gamecard-container">
+                      <ul class="col-3 small-gamecard">
+                      </ul>
+
+                      <ul class="col-3 small-gamecard">
+                      </ul>
+
+                      <ul class="col-3 small-gamecard">
+                      </ul>
+
+                      <ul class="col-3 small-gamecard">
+                      </ul>
+
+                      <ul class="col-3 small-gamecard">
+                      </ul>
+
+                      <ul class="col-3 small-gamecard">
+                      </ul>
+
+                      <ul class="col-3 small-gamecard unbought">
+                      </ul>
+
+                      <ul class="col-3 small-gamecard unbought">
+                      </ul>
+                    </li>
+
+                    <li class="col small-gamecard-container">
+                      <ul class="col-3 small-gamecard unbought">
+                      </ul>
+
+                      <ul class="col-3 small-gamecard unbought">
+                      </ul>
+
+                      <ul class="col-3 small-gamecard unbought">
+                      </ul>
+
+                      <ul class="col-3 small-gamecard unbought">
+                      </ul>
+
+                      <ul class="col-3 small-gamecard unbought">
+                      </ul>
+
+                      <ul class="col-3 small-gamecard unbought">
+                      </ul>
+
+                      <ul class="col-3 small-gamecard unbought">
+                      </ul>
+
+                      <ul class="col-3 small-gamecard unbought">
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+                <script type="text/javascript">
+                for(var i = 1; i < 26; i++) {
+                  if(i == 13) {
+                    $(".small-gamecard:not(.unbought)").append('<li class="star"></li>');
+                  } else {
+                    var myChance = new Chance();
+                    var addon = (myChance.bool() && myChance.bool()) ? 'checked' : '';
+
+
+                    $(".small-gamecard:not(.unbought)").append('<li class="'+addon+'">'+i+'</li>');
+                  }
+                }
+
+                $(".small-gamecard.unbought").html('<li><button class="btn green-button-orange-border" data-action="buycard">Buy Card!</button></li>')
+                </script>
+
+                <div id="gameCardsScrollbar">
+                  <div class="scrollLeft pull-left"></div>
+                  <div class="scrollbar pull-left">
+                    <div class="handle"></div>
+                  </div>
+                  <div class="scrollRight pull-right"></div>
+                </div>
+
+                <script type="text/javascript">
+                  $(document).ready(function(){
+                    $("#gamecards-container").sly({
+                      horizontal: 1,
+                      itemNav: 'centered',
+                      smart: 1,
+                      activateOn: 'click',
+                      mouseDragging: 0,
+                      touchDragging: 0,
+                      releaseSwing: 1,
+                      startAt: 0,
+                      scrollSource: $('#gamecards'),
+                      scrollBar: $('#gameCardsScrollbar .scrollbar'),
+                      scrollBy: 1,
+                      speed: 300,
+                      elasticBounds: 1,
+                      easing: 'easeOutExpo',
+                      dragHandle: 1,
+                      dynamicHandle: 0,
+                      clickBar: 0,
+
+                      // Buttons
+                      prev: $("#gameCardsScrollbar .scrollLeft"),
+                      next: $("#gameCardsScrollbar .scrollRight")
+                    });
+                  });
+                </script>
+              </div>
+            </section>
+          </section>
+
+          <section id="information" class="row">
+            <div id="infoScroller">
+              <div class="section">
+                <p>Lorem Ipsum Dolar Sit Amet</p>
+                <div class="divider"></div>
+              </div>
+              <div class="section">
+                <p>Lorem Ipsum Dolar Sit Amet</p>
+                <div class="divider"></div>
+              </div>
+              <div class="section">
+                <p>Lorem Ipsum Dolar Sit Amet</p>
+                <div class="divider"></div>
+              </div>
+              <div class="section">
+                <p>Lorem Ipsum Dolar Sit Amet</p>
+                <div class="divider"></div>
+              </div>
+              <div class="section">
+                <p>Lorem Ipsum Dolar Sit Amet</p>
+                <div class="divider"></div>
+              </div>
+            </div>
+            <!-- Voeg zoveel <div.section>'s toe als je wil -->
+          </section>
+          <script type="text/javascript">
+          (function($) {
+            $(function() { //on DOM ready 
+              $("#infoScroller").simplyScroll({
+                pauseOnHover: false,
+                pauseOnTouch: false,
+                autoMode: 'loop',
+                auto: true,
+                orientation: 'horizontal',
+                direction: 'forwards',
+                speed: 2
+              });
+            });
+          })(jQuery);
+          </script>
+
+          <section id="players" class="row">
+            <div id="entrance">
+              <div id="topPillar"></div>
+              <div id="carpet"></div>
+              <div id="bottomPillar"></div>
+            </div>
+
+            <div id="tables">
+              <div id="topRow">
+                <canvas class="table" data-table="1"></canvas>
+                <canvas class="table" data-table="2"></canvas>
+                <canvas class="table" data-table="3"></canvas>
+                <canvas class="table" data-table="4"></canvas>
+                <canvas class="table" data-table="5"></canvas>
+              </div>
+
+              <div id="middleRow">
+                <canvas class="table" data-table="6"></canvas>
+                <canvas class="table" data-table="7"></canvas>
+                <canvas class="table" data-table="8"></canvas>
+                <canvas class="table" data-table="9"></canvas>
+              </div>
+
+              <div id="bottomRow">
+                <canvas class="table" data-table="10"></canvas>
+                <canvas class="table" data-table="11"></canvas>
+              </div>
+            </div>
+          </section>
+
+          <footer id="footer">
+            <button id="settingsButton" class="btn settings-button">Settings</button>
+
+            <ul id="menu">
+              <li>
+                <div>
+                  <a href="#">
+                    <p class="warning-icon">Report</p>
+                  </a>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <a href="#">
+                    <p class="info-icon">Info</p>
+                  </a>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <a href="#">
+                    <p class="rocket-icon">Mini Games</p>
+                  </a>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <a href="#">
+                    <p class="money-icon">Money</p>
+                  </a>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <a href="#">
+                    <p class="sound-icon muted">Sound</p>
+                  </a>
+                </div>
+              </li>
+              <li>
+                <div id="goFullScreen">
+                  <a href="#">
+                    <p class="fullscreen-icon">Full Screen</p>
+                  </a>
+                </div>
+                <script type="text/javascript">
+                  $("#goFullScreen").click(function(){
+                    var docElm = document.documentElement;
+                    if (docElm.requestFullscreen) {
+                      docElm.requestFullscreen();
+                    }
+                    else if (docElm.mozRequestFullScreen) {
+                      docElm.mozRequestFullScreen();
+                    }
+                    else if (docElm.webkitRequestFullScreen) {
+                      docElm.webkitRequestFullScreen();
+                    }
+                  });
+                  </script>
+              </li>
+            </ul>
+
+            <div id="userbox">
+              <h3>Dummy123</h3>
+
+              <div id="earnings">
+                <div class="earning money">
+                  <p>&euro; 9999,99</p>
+                </div>
+
+                <div class="earning bonus">
+                  <p>&euro; 9999,99</p>
+                  <div class="top">
+                    <span>+</span>
+                    <p>$ 100,00</p>
+                  </div>
+                </div>
+              </div>
+
+              <div id="users">
+                <ul class="nav nav-tabs">
+                  <li>
+                    <a data-target="#friends">
+                      <span>Friends</span>
+                    </a>
+                  </li>
+                  <li class="active">
+                    <a data-target="#allUsers">
+                      <span>All Users</span>
+                    </a>
+                  </li>
+                </ul>
+                <div class="tab-content" id="friendsContainer">
+                  <div class="tab-pane active" id="allUsers">
+                    <ul class="friendsContainer">
+                      <li class="friend online" data-friend="tonystark">
+                        <div class="status"></div>
+                        <div class="name">Tony Stark</div>
+                      </li>
+                      <li class="friend" data-friend="pepperpotts">
+                        <div class="status"></div>
+                        <div class="name">Pepper Potts</div>
+                      </li>
+                      <li class="friend online" data-friend="jimrhodes">
+                        <div class="status"></div>
+                        <div class="name">Jim Rhodes</div>
+                      </li>
+                      <li class="friend online" data-friend="philcoulson">
+                        <div class="status"></div>
+                        <div class="name">Phil Coulson</div>
+                      </li>
+                      <li class="friend" data-friend="obadiahstane">
+                        <div class="status"></div>
+                        <div class="name">Obadiah Stane</div>
+                      </li>
+                      <li class="friend online" data-friend="tonystark">
+                        <div class="status"></div>
+                        <div class="name">Tony Stark</div>
+                      </li>
+                      <li class="friend" data-friend="pepperpotts">
+                        <div class="status"></div>
+                        <div class="name">Pepper Potts</div>
+                      </li>
+                      <li class="friend online" data-friend="jimrhodes">
+                        <div class="status"></div>
+                        <div class="name">Jim Rhodes</div>
+                      </li>
+                      <li class="friend online" data-friend="philcoulson">
+                        <div class="status"></div>
+                        <div class="name">Phil Coulson</div>
+                      </li>
+                      <li class="friend" data-friend="obadiahstane">
+                        <div class="status"></div>
+                        <div class="name">Obadiah Stane</div>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="tab-pane" id="friends">
+                    <ul class="friendsContainer">
+                      <li class="friend online" data-friend="tonystark">
+                        <div class="status"></div>
+                        <div class="name">Tony Stark</div>
+                      </li>
+                      <li class="friend online" data-friend="jimrhodes">
+                        <div class="status"></div>
+                        <div class="name">Jim Rhodes</div>
+                      </li>
+                      <li class="friend" data-friend="pepperpotts">
+                        <div class="status"></div>
+                        <div class="name">Pepper Potts</div>
+                      </li>
+                      <li class="friend" data-friend="obadiahstane">
+                        <div class="status"></div>
+                        <div class="name">Obadiah Stane</div>
+                      </li>
+                      <li class="friend online" data-friend="philcoulson">
+                        <div class="status"></div>
+                        <div class="name">Phil Coulson</div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <script type="text/javascript">
+                var friendTabs = new Array();
+
+                var pane = $("#friendsContainer .tab-pane:first");
+                pane.jScrollPane({
+                  showArrows: false,
+                  mouseWheelSpeed: 50
+                });
+                friendTabs["#friends"] = pane.data('jsp');
+
+                var pane = $("#friendsContainer .tab-pane:last");
+                pane.jScrollPane({
+                  showArrows: false,
+                  mouseWheelSpeed: 50
+                });
+                friendTabs["#allUsers"] = pane.data('jsp');
+
+                /*
+                  jScrollPane is used, when changing the content of the friendlist you need to call friendTabs[<id of list>].reinitialize();
+                  also you need to edit the content using friendTabs[<id of list>].getContentPane().append("<your html>");
+                  more info (last question): http://jscrollpane.kelvinluck.com/faqs.html
+                */
+
+                $('#users .nav.nav-tabs').on("click", "a", function (e) {
+                  e.preventDefault();
+                  $(this).tab('show');
+                });
+
+                $('#users .nav a:last').tab('show') // Select first tab
+                </script>
+              </div>
+            </div>
+
+            <div id="chatBox">
+              <ul id="chatTabs" class="nav nav-tabs">
+                <li class="active" data-chatbox="chatbox">
+                  <a data-target="#chatbox">
+                    <span>Chat Box</span>
+                  </a>
+                </li>
+              </ul>
+              <div id="chatContent">
+                <div class="row">
+                  <div class="col-12 tab-content" id="chatContainer">
+                    <div class="tab-pane active" data-chatbox="chatbox" id="chatbox">
+                      
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-12" id="createMessage">
+                    <form id="messageForm" method="POST" action="#">
+                      <input type="text" id="messageField" />
+                      <button type="button" id="selectEmoticon">
+                        <div class="emoticon-smile"></div>
+                      </button>
+                      <input type="submit" class="btn orange-button-square-light" id="sendChatMessage" value="Send" />
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <script type="text/javascript">
+              $(function(){
+                $("#chatTabs").tab();
+
+                var chatboxes = $("#chatBox").initializeChatbox({
+                          chatboxes: {
+                            0: {
+                              title:  "Chat Box",
+                              id:   "chatbox"
+                            }
+                          }
+                        });
+
+                var pane = $(".tab-pane[data-chatbox=chatbox]");
+                pane.jScrollPane({
+                  showArrows: false,
+                  mouseWheelSpeed: 50
+                });
+                var api = pane.data('jsp');
+                chatboxes["chatbox"] = api;
+
+                $('#chatBox .nav.nav-tabs').on("click", "a", function (e) {
+                  e.preventDefault();
+
+                  setTimeout((function(self, chatBoxes) {
+                    return function() {
+                      chatBoxes[$(self).parent().attr("data-chatbox")].reinitialise();
+                    }
+                  })(this, chatboxes), 300);
+
+                  $(this).tab('show');
+                }).on("click", ".close", function(){
+                  $("#chatBox").closeChatbox({
+                    chatboxID: $(this).closest("li").attr("data-chatbox")
+                  });
+
+                  return false;
+                });
+
+                $("#messageForm").on("submit", function(e) {
+                  e.preventDefault();
+
+                  var message = $("#messageField").val();
+
+                  if(message == "") return false;
+
+                  $("#chatBox").addChatboxMessage({
+                    playerName: "Ik",
+                    chatbox: chatboxes[$("#chatTabs li.active").attr("data-chatbox")],
+                    message: message
+                  });
+
+                  $("#messageField").val("");
+                  $("#messageField").focus();
+
+                  return false;
+                });
+
+                /* Example Code */
+                /* 2 mensen die iets zeggen in de chatbox room */
+                $("#chatBox").addChatboxMessage({
+                  playerName: "xorinzor",
+                  chatbox: chatboxes["chatbox"],
+                  message: "Hoi! :)"
+                });
+
+                $("#chatBox").addChatboxMessage({
+                  playerName: "someone",
+                  chatbox: chatboxes["chatbox"],
+                  message: "Good day! :D How are you doing? 8|"
+                });
+
+                /* Er wordt na 1 seconde een chatbox voor tony stark aangemaakt en daarna wordt er een bericht gezegd */
+                setTimeout(function(){
+                  chatboxes = $("#chatBox").createChatbox({
+                    chatboxTitle:   "Tony Stark",
+                    chatboxID:    "tonystark",
+                    original:     chatboxes
+                  });
+
+                  $("#chatBox").addChatboxMessage({
+                    playerName: "xorinzor",
+                    chatbox: chatboxes["tonystark"],
+                    message: "Hoi! ^_^"
+                  });
+                }, 1000);
+
+              });
+              </script>
+            </div>
+          </footer>
+        </div><!-- /wrapper -->
+      </div>
+    </div> <!-- /container -->
+
+    <script type="text/javascript">
+      $('input[data-checkbox=custom]').checkbox({
+        cls: 'custom-checkbox',
+        empty: '/assets/empty.png'
+      });
+    </script>
+
+    <div class="modal fade" id="winnerModalDutch">
+      <div class="modal-dialog">
+        <div class="modal-content">     
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="winner col-6">
+                <div class="col-6">
+                  <p>Bruce Wayne</p>
+                </div>
+                <div class="col-6">
+                  <div class="panel">
+                    <div class="panel-heading">
+                      <h3 class="panel-title">Patternprice</h3>
+                    </div>
+                    <div class="panel-body">
+                      <div class="col-6">
+                        <p>&euro; 9999,00</p>
+                      </div>
+                      <div class="col-6">
+                        <p>1 van 6</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="winner col-6">
+                <div class="col-6">
+                  <p>Bruce Wayne</p>
+                </div>
+                <div class="col-6">
+                  <div class="panel">
+                    <div class="panel-heading">
+                      <h3 class="panel-title">Patternprice</h3>
+                    </div>
+                    <div class="panel-body">
+                      <div class="col-6">
+                        <p>&euro; 9999,00</p>
+                      </div>
+                      <div class="col-6">
+                        <p>1 van 6</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="winner col-6">
+                <div class="col-6">
+                  <p>Bruce Wayne</p>
+                </div>
+                <div class="col-6">
+                  <div class="panel">
+                    <div class="panel-heading">
+                      <h3 class="panel-title">Patternprice</h3>
+                    </div>
+                    <div class="panel-body">
+                      <div class="col-6">
+                        <p>&euro; 9999,00</p>
+                      </div>
+                      <div class="col-6">
+                        <p>1 van 6</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="winner col-6">
+                <div class="col-6">
+                  <p>Bruce Wayne</p>
+                </div>
+                <div class="col-6">
+                  <div class="panel">
+                    <div class="panel-heading">
+                      <h3 class="panel-title">Patternprice</h3>
+                    </div>
+                    <div class="panel-body">
+                      <div class="col-6">
+                        <p>&euro; 9999,00</p>
+                      </div>
+                      <div class="col-6">
+                        <p>1 van 6</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="winner col-6">
+                <div class="col-6">
+                  <p>Bruce Wayne</p>
+                </div>
+                <div class="col-6">
+                  <div class="panel">
+                    <div class="panel-heading">
+                      <h3 class="panel-title">Patternprice</h3>
+                    </div>
+                    <div class="panel-body">
+                      <div class="col-6">
+                        <p>&euro; 9999,00</p>
+                      </div>
+                      <div class="col-6">
+                        <p>1 van 6</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="winner col-6">
+                <div class="col-6">
+                  <p>Bruce Wayne</p>
+                </div>
+                <div class="col-6">
+                  <div class="panel">
+                    <div class="panel-heading">
+                      <h3 class="panel-title">Patternprice</h3>
+                    </div>
+                    <div class="panel-body">
+                      <div class="col-6">
+                        <p>&euro; 9999,00</p>
+                      </div>
+                      <div class="col-6">
+                        <p>1 van 6</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="winner col-6">
+                <div class="col-6">
+                  <p>Bruce Wayne</p>
+                </div>
+                <div class="col-6">
+                  <div class="panel">
+                    <div class="panel-heading">
+                      <h3 class="panel-title">Patternprice</h3>
+                    </div>
+                    <div class="panel-body">
+                      <div class="col-6">
+                        <p>&euro; 9999,00</p>
+                      </div>
+                      <div class="col-6">
+                        <p>1 van 6</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="winner col-6">
+                <div class="col-6">
+                  <p>Bruce Wayne</p>
+                </div>
+                <div class="col-6">
+                  <div class="panel">
+                    <div class="panel-heading">
+                      <h3 class="panel-title">Patternprice</h3>
+                    </div>
+                    <div class="panel-body">
+                      <div class="col-6">
+                        <p>&euro; 9999,00</p>
+                      </div>
+                      <div class="col-6">
+                        <p>1 van 6</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div>
+
+    <div class="modal fade" id="winnerModalEnglish">
+      <div class="modal-dialog">
+        <div class="modal-content">     
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+          </div>
+          <div class="modal-body">
+            <p>One fine body&hellip;</p>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div>
+
+    <script type="text/javascript">
+      $('#winnerModalDutch').modal({
+        backdrop: false,
+        show: false
+      })
+    </script>
+  </body>
+</html>

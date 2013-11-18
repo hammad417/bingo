@@ -356,7 +356,8 @@ a {
 **/
 body {
 	background-image: url(/assets/background.png);
-	overflow-x: hidden;
+	overflow-x: scroll;
+	zoom: 0.7;
 }
 
 .container-narrow {
@@ -364,7 +365,7 @@ body {
 	padding-top:	10px;
 	min-width: 		1904px;
 	width: 			1904px;
-	overflow-x:		hidden;
+	overflow-x:		scroll;
 }
 
 #game {
@@ -678,11 +679,13 @@ body {
 @-webkit-keyframes spinIt {
     100% {
         -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
     }
 }
 @-moz-keyframes spinIt {
     100% {
         -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
     }
 }
 

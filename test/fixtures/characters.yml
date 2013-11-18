@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  image_url: MyString
+  gender: 1
+  face: 1
+  coat: 1
+  pent: 1
+
+two:
+  title: MyString
+  image_url: MyString
+  gender: 1
+  face: 1
+  coat: 1
+  pent: 1

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  game_user: 
+  b_pattern: MyText
+  i_pattern: MyText
+  n_pattern: MyText
+  g_pattern: MyText
+  o_pattern: MyText
+
+two:
+  game_user: 
+  b_pattern: MyText
+  i_pattern: MyText
+  n_pattern: MyText
+  g_pattern: MyText
+  o_pattern: MyText

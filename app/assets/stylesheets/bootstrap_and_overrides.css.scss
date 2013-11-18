@@ -1,0 +1,145 @@
+/*
+  =require twitter-bootstrap-static/bootstrap
+
+  Use Font Awesome icons (default)
+  To use Glyphicons sprites instead of Font Awesome, replace with "require twitter-bootstrap-static/sprites"
+  =require twitter-bootstrap-static/fontawesome
+
+*/
+
+// handy mixins by preboot
+@import "preboot";
+
+// vars
+$theme-color-light: #f6f6df;
+$theme-color-dark: #d2d196;
+
+body {
+	padding: 20px 0;
+}
+
+.well,
+.navbar,
+.list-group-item {
+	@include gradient-vertical(#f6f6df, #e1e0af);
+	border: 1px solid #d2d196;
+}
+
+.well {
+	@include box-shadow(none);
+	> .list-group-flush {
+		margin: 15px -19px;
+	}
+}
+
+.navbar {
+	min-height: 0;
+	.nav {
+		> .active {
+			> a,
+			> a:hover,
+			> a:focus {
+				background-color: $theme-color-light;
+				@include box-shadow(( inset 0 5px 10px $theme-color-dark ));
+			}
+		}
+		&.nav-game {
+			text-align: center;
+		}
+	}
+}
+
+.btn-success {
+	@include gradient-vertical(#648941, #364b22);
+	&:hover {
+		@include gradient-vertical(darken(#648941, 3%), darken(#364b22, 5%));
+		border-color: #364b22;
+	}
+}
+
+.btn-warning {
+	@include gradient-vertical(#f6881f, #f26922);
+	&:hover {
+		@include gradient-vertical(darken(#f6881f, 3%), darken(#f26922, 5%));
+		border-color: #f26922;
+	}
+}
+
+.list-profile {
+	.list-group-item {
+		font-family: "Arial Rounded", Arial, sans-serif;
+		font-size: 20px;
+		padding: 10px;
+		@include clearfix();
+	}
+	.list-group-item-heading {
+		display: inline-block;
+		margin: 10px 0;
+	}
+
+	.list-group-item-score {
+		color: #7e3b09;
+		font-weight: 700;
+		float: right;
+		border-radius: 4px;
+		display: inline-block;
+		padding: 12px 10px;
+		@include box-shadow((
+			inset 0 5px 10px $theme-color-dark,
+			0 1px 0 #fff
+		));
+	}
+}
+
+.rooms {
+	.panel {
+		width: 30%;
+		.panel-heading {
+			color: #fff;
+			font-size: 20px;
+			text-shadow: 0 -1px 0 #000;
+			margin-left: -15px;
+			margin-right: -15px;
+		}
+		.list-group {
+			background: 0;
+		}
+	}
+}
+
+.panel-red {
+	border: 0;
+	background-color: #721010;
+	.panel-heading {
+		border: 0;
+		@include gradient-vertical(#ed2024, #9e1212);
+	}
+	.btn {
+		border-color: #9d1212;
+		color: #fff;
+		text-shadow: 0 -1px 0 #000;
+		@include gradient-vertical(#ed2024, #9d1212);
+		&:hover,
+		&:focus {
+			@include gradient-vertical(darken(#ed2024, 3%), darken(#9d1212, 5%));
+		}
+	}
+}
+.panel-blue {
+	border: 0;
+	background-color: #14446a;
+	.panel-heading {
+		border: 0;
+		@include gradient-vertical(#488ccb, #0c5b98);
+	}
+	.btn {
+		border-color: #0b5a97;
+		color: #fff;
+		text-shadow: 0 -1px 0 #000;
+		@include gradient-vertical(#478cca, #0b5a97);
+		&:hover,
+		&:focus {
+			@include gradient-vertical(darken(#478cca, 3%), darken(#0b5a97, 5%));
+		}
+	}
+}

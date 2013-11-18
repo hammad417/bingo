@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  room: 
+  status: 1
+  b_pattern: MyText
+  i_pattern: MyText
+  n_pattern: MyText
+  g_pattern: MyText
+  o_pattern: MyText
+
+two:
+  room: 
+  status: 1
+  b_pattern: MyText
+  i_pattern: MyText
+  n_pattern: MyText
+  g_pattern: MyText
+  o_pattern: MyText
