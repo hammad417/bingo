@@ -357,7 +357,6 @@ a {
 body {
 	background-image: url(/assets/background.png);
 	overflow-x: scroll;
-	zoom: 0.7;
 }
 
 .container-narrow {
@@ -366,6 +365,7 @@ body {
 	min-width: 		1904px;
 	width: 			1904px;
 	overflow-x:		scroll;
+	zoom: 0.7;
 }
 
 #game {
