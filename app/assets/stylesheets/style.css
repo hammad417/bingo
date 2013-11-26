@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'ArialRoundedMTBoldBold';
-    src: url('/assets/arial_rounded_mt_bold.eot');
-    src: url('/assets/arial_rounded_mt_bold.eot') format('embedded-opentype'),
-         url('/assets/arial_rounded_mt_bold.woff') format('woff'),
-         url('/assets/arial_rounded_mt_bold.ttf') format('truetype'),
-         url('/assets/arial_rounded_mt_bold.svg#ArialRoundedMTBoldBold') format('svg');
+    src: url('/assets/font/arial_rounded_mt_bold.eot');
+    src: url('/assets/font/arial_rounded_mt_bold.eot') format('embedded-opentype'),
+         url('/assets/font/arial_rounded_mt_bold.woff') format('woff'),
+         url('/assets/font/arial_rounded_mt_bold.ttf') format('truetype'),
+         url('/assets/font/arial_rounded_mt_bold.svg#ArialRoundedMTBoldBold') format('svg');
 }
 
 /* Disable text selection */
@@ -30,7 +30,7 @@
 	-webkit-border-radius: 	10px;
 	-moz-border-radius: 	10px;
 	border-radius: 			10px;
-	behavior: 				url(/assets/PIE.htc);
+	behavior: 				url(/assets/css/PIE.htc);
 }
 
 .panel .panel-heading {
@@ -52,15 +52,15 @@
 	-moz-border-radius-topright: 	10px;
 	border-top-left-radius: 		10px;
 	border-top-right-radius: 		10px;
-	behavior: 						url(/assets/PIE.htc);
+	behavior: 						url(/assets/css/PIE.htc);
 }
 
 .panel .panel-heading .panel-title {
 	color: 			#FFF;
 	font-family: 	"ArialRoundedMTBoldBold";
-	font-size: 		14.5px;
+	font-size: 		0.7em;
 	text-shadow: 	0px -1px 0px rgba(0, 0, 0, 1);
-	behavior: 		url(/assets/PIE.htc);
+	behavior: 		url(/assets/css/PIE.htc);
 }
 
 /* upside down version of the panel */
@@ -83,14 +83,14 @@
 	-moz-border-radius-bottomright: 	10px;
 	border-top-bottom-radius: 			10px;
 	border-top-bottom-radius: 			10px;
-	behavior: 							url(/assets/PIE.htc);
+	behavior: 							url(/assets/css/PIE.htc);
 }
 
 .panel .panel-footer .panel-title {
 	color: 				#FFF;
-	font-size:			17px;
+	font-size:			0.8em;
 	text-shadow: 		0px -1px 0px rgba(0, 0, 0, 1);
-	behavior: 			url(/assets/PIE.htc);
+	behavior: 			url(/assets/css/PIE.htc);
 }
 
 .big-orange-button {
@@ -99,10 +99,10 @@
 	width: 				222px;
 	height: 			39px;
 	color: 				#FFF;
-	font-size: 			14.5px;
+	font-size: 			0.7em;
 	font-family: 		"ArialRoundedMTBoldBold";
 	text-shadow: 		0px -1px 0px rgba(0, 0, 0, 1);
-	behavior: 			url(/assets/PIE.htc);
+	behavior: 			url(/assets/css/PIE.htc);
 }
 
 .orange-button {
@@ -111,10 +111,10 @@
 	width: 				168px;
 	height: 			39px;
 	color: 				#FFF;
-	font-size: 			14.5px;
+	font-size: 			0.75em;
 	font-family: 		"ArialRoundedMTBoldBold";
 	text-shadow: 		0px -1px 0px rgba(0, 0, 0, 1);
-	behavior: 			url(/assets/PIE.htc);
+	behavior: 			url(/assets/css/PIE.htc);
 }
 
 .orange-button img {
@@ -128,10 +128,10 @@
 	height: 			31px;
 	color: 				#FFF;
 	line-height: 		17px;
-	font-size: 			14.5px;
+	font-size: 			0.75em;
 	font-family: 		"ArialRoundedMTBoldBold";
 	text-shadow: 		0px -1px 0px rgba(0, 0, 0, 1);
-	behavior: 			url(/assets/PIE.htc);
+	behavior: 			url(/assets/css/PIE.htc);
 }
 
 .orange-button-square {
@@ -141,10 +141,10 @@
 	height: 			72px;
 	color: 				#FFF;
 	line-height: 		17px;
-	font-size: 			15.3px;
+	font-size: 			0.8em;
 	font-family: 		"ArialRoundedMTBoldBold";
 	text-shadow: 		0px -1px 0px rgba(125, 63, 16, 1);
-	behavior: 			url(/assets/PIE.htc);
+	behavior: 			url(/assets/css/PIE.htc);
 }
 
 .orange-button-square-light {
@@ -154,10 +154,10 @@
 	height: 			54px;
 	color: 				#683609 !important;
 	line-height: 		17px;
-	font-size: 			18.1px;
+	font-size: 			0.8em;
 	font-family: 		"ArialRoundedMTBoldBold";
 	text-shadow: 		0px 1px 0px rgba(255, 255, 255, 0.45);
-	behavior: 			url(/assets/PIE.htc);
+	behavior: 			url(/assets/css/PIE.htc);
 }
 
 .orange-button-dropdown {
@@ -168,10 +168,10 @@
 	height: 			29px;
 	color: 				#FFF;
 	line-height: 		17px;
-	font-size: 			15.8px;
+	font-size: 			0.8em;
 	font-family: 		"ArialRoundedMTBoldBold";
 	text-shadow: 		0px -1px 0px rgba(0, 0, 0, 0.42);
-	behavior: 			url(/assets/PIE.htc);
+	behavior: 			url(/assets/css/PIE.htc);
 }
 
 .big-green-button {
@@ -180,7 +180,7 @@
 	width: 				328px;
 	height: 			58px;
 	color: 				#FFF;
-	font-size: 			17.5px;
+	font-size: 			0.8em;
 	font-family: 		"ArialRoundedMTBoldBold";
 	text-shadow: 		0px -1px 0px rgba(0, 0, 0, 1);
 	behavior: 			url(/assets/css/PIE.htc);
@@ -192,7 +192,7 @@
 	width: 				222px;
 	height: 			39px;
 	color: 				#FFF;
-	font-size: 			14.5px;
+	font-size: 			0.7em;
 	font-family: 		"ArialRoundedMTBoldBold";
 	text-shadow: 		0px -1px 0px rgba(0, 0, 0, 1);
 	behavior: 			url(/assets/css/PIE.htc);
@@ -204,7 +204,7 @@
 	width: 				114px;
 	height: 			34px;
 	color: 				#FFF;
-	font-size: 			17.2px;
+	font-size: 			0.8em;
 	font-family: 		"ArialRoundedMTBoldBold";
 	text-shadow: 		0px -1px 0px rgba(0, 0, 0, 0.72);
 	behavior: 			url(/assets/css/PIE.htc);
@@ -218,7 +218,7 @@
 	height: 			72px;
 	color: 				#FFF;
 	line-height: 		17px;
-	font-size: 			17.5px;
+	font-size: 			0.8em;
 	font-family: 		"ArialRoundedMTBoldBold";
 	text-shadow: 		0px -1px 0px rgba(28, 38, 18, 1);
 	behavior: 			url(/assets/css/PIE.htc);
@@ -231,7 +231,7 @@
 	height: 			45px;
 	color: 				#FFF;
 	line-height: 		23px;
-	font-size: 			23.3px;
+	font-size: 			0.9em;
 	font-family: 		"ArialRoundedMTBoldBold";
 	text-shadow: 		0px -1px 0px rgba(28, 38, 18, 1);
 	behavior: 			url(/assets/css/PIE.htc);
@@ -245,7 +245,7 @@
 	height: 			81px;
 	color: 				#525134;
 	line-height: 		23px;
-	font-size: 			14px;
+	font-size: 			0.7em;
 	font-family: 		"ArialRoundedMTBoldBold";
 	text-shadow: 		0px 1px 0px rgba(255, 255, 255, 0.49);
 	padding:			39px 0px 0px 28px;
@@ -260,7 +260,7 @@
 	height: 			76px;
 	color: 				#525134;
 	line-height: 		23px;
-	font-size: 			14px;
+	font-size: 			0.7em;
 	font-family: 		"ArialRoundedMTBoldBold";
 	text-shadow: 		0px 1px 0px rgba(255, 255, 255, 0.49);
 	padding:			44px 0px 0px 6px;
@@ -278,7 +278,7 @@
 .custom-checkbox {
 	margin-left: -5px;
 	display: inline; 
-	font-size: 20px; 
+	font-size: 0.85em; 
 	line-height: 21px; 
 	cursor: pointer;
 }
@@ -304,7 +304,7 @@
 
 p.details {
 	font-style: italic;
-	font-size: 	12.5px;
+	font-size: 	0.7em;
 	color: 		#868b7e;
 }
 
@@ -356,7 +356,6 @@ a {
 **/
 body {
 	background-image: url(/assets/background.png);
-	overflow-x: scroll;
 }
 
 .container-narrow {
@@ -364,8 +363,6 @@ body {
 	padding-top:	10px;
 	min-width: 		1904px;
 	width: 			1904px;
-	overflow-x:		scroll;
-	zoom: 0.7;
 }
 
 #game {
@@ -403,7 +400,7 @@ body {
 	text-align: 	right;
 	width: 			80px;
 	height:			50px;
-	font-size:		15.8px;
+	font-size:		0.8em;
 	padding:		5px 7px 0px 7px;
 	line-height: 	19px;
 	overflow: 		hidden;
@@ -415,7 +412,7 @@ body {
 	width: 			96px;
 	height: 		46px;
 	padding:		5px 9px 0px 0px;
-	font-size:		19.7px;
+	font-size:		0.8em;
 	line-height: 	37px;
 	overflow: 		hidden;
 }
@@ -499,7 +496,7 @@ body {
 	position: 	relative;
 	top: 		-50px;
 	left:		0px;
-	font-size:	15.9px;
+	font-size:	0.8em;
 	padding:	0px;
 	width:		23px;
 	height:		27px;
@@ -514,7 +511,7 @@ body {
 	position: 	relative;
 	top: 		-78px;
 	left:		-2px;
-	font-size:	15.9px;
+	font-size:	0.8em;
 	padding: 	0px;
 	width:		78px;
 	height:		27px;
@@ -589,7 +586,7 @@ body {
 	border-right:	0px;
 	border-bottom: 	0px;
 	font-family: 	"ArialRoundedMTBoldBold";
-	font-size: 		27px;
+	font-size: 		1em;
 	line-height: 	63px;
 	text-align: 	center;
 	color:			#000;
@@ -679,13 +676,11 @@ body {
 @-webkit-keyframes spinIt {
     100% {
         -webkit-transform: rotate(360deg);
-        -moz-transform: rotate(360deg);
     }
 }
 @-moz-keyframes spinIt {
     100% {
         -webkit-transform: rotate(360deg);
-        -moz-transform: rotate(360deg);
     }
 }
 
@@ -722,7 +717,7 @@ body {
 	behavior: 				url(/assets/css/PIE.htc);
 	padding-right: 			6px;
 	font-family: 			"ArialRoundedMTBoldBold";
-	font-size: 				15.8px;
+	font-size: 				0.8em;
 	color: 					#c3dfa8;
 	text-shadow: 			0px -1px 0px rgba(0, 0, 0, 1);
 }
@@ -750,7 +745,7 @@ body {
 	width: 			58px;
 	height: 		29px;
 	font-family: 	"ArialRoundedMTBoldBold";
-	font-size: 		22.3px;
+	font-size: 		0.8em;
 	text-align: 	center;
 	color: 			#FFF;
 	text-shadow: 	0px 2px 0px rgba(0, 0, 0, 0.37);
@@ -796,7 +791,7 @@ body {
 	margin: 		1px 1px 0px 0px;
 	text-align: 	center;
 	font-family: 	"ArialRoundedMTBoldBold";
-	font-size: 		17px;
+	font-size: 		0.8em;
 	color: 			#4b6631;
 	text-shadow:	0px 2px 0px rgba(255, 255, 255, 0.61);
 	line-height: 	30px;
@@ -900,7 +895,7 @@ body {
 	padding: 	 15px 0px 0px 0px;
 	color: 		 #e6d0b7;
 	font-family: "ArialRoundedMTBoldBold";
-	font-size: 	 20px;
+	font-size: 	 0.8em;
 	text-shadow: 0px 1px 6px rgba(0,0,0,0.88);
 	margin: 	 0;
 }
@@ -1025,7 +1020,7 @@ body {
 	float: 				left;
 	color: 				#FFF;
 	font-family: 		"ArialRoundedMTBoldBold";
-	font-size: 	 		17.2px;
+	font-size: 	 		0.8em;
 	text-align: 		center;
 	text-shadow: 		0px -1px 0px rgba(0, 0, 0, 0.75);
 	behavior: 			url(/assets/css/PIE.htc);
@@ -1109,7 +1104,7 @@ body {
 	left: 			15px;
 	color: 			#FFF;
 	font-family: 	"ArialRoundedMTBoldBold";
-	font-size: 		20px;
+	font-size: 		0.8em;
 	text-shadow: 	0px -1px 0px rgba(0, 0, 0, 0.72);
 }
 
@@ -1126,7 +1121,7 @@ body {
 	height: 	32px;
 	padding: 	3px 0px 0px 54px;
 	font-family:"ArialRoundedMTBoldBold";
-	font-size: 	17.6px;
+	font-size: 	0.8em;
 	text-shadow:0px -1px 0px rgba(0, 0, 0, 0.53);
 	color: 		#FFF;
 	float: 		left;
@@ -1151,7 +1146,7 @@ body {
 	position: 	relative;
 	top: 		0px;
 	left:		0px;
-	font-size:	15.9px;
+	font-size:	0.7em;
 	padding:	0px;
 	width:		23px;
 	height:		27px;
@@ -1166,7 +1161,7 @@ body {
 	position: 	relative;
 	top: 		0px;
 	left:		0px;
-	font-size:	15.9px;
+	font-size:	0.8em;
 	padding: 	0px;
 	width:		77px;
 	height:		27px;
@@ -1226,7 +1221,7 @@ body {
 	border-top-left-radius: 9px;
 	border-top-right-radius: 9px;
 	font-family:"ArialRoundedMTBoldBold";
-	font-size: 	18px;
+	font-size: 	0.8em;
 	color: #FFF;
 	line-height: 14px;
 }
@@ -1357,7 +1352,7 @@ body {
 	color: 				#161616;
 	font-family: 		arial;
 	font-weight: 		bold;
-	font-size: 			16.8px;
+	font-size: 			0.8em;
 }
 
 #footer #userbox #users ul.friendsContainer li.friend.online div.name {
@@ -1426,7 +1421,7 @@ body {
 	background: 	linear-gradient(to bottom, #e5e3a8 0%,#d4d17e 100%); /* W3C */
 	filter: 		progid:DXImageTransform.Microsoft.gradient( startColorstr='#e5e3a8', endColorstr='#d4d17e',GradientType=0 ); /* IE6-9 */	
 	font-family:	"ArialRoundedMTBoldBold";
-	font-size:		17.5px;
+	font-size:		0.8em;
 	color:			#3c3c23;
 	text-align: 	center;
 	z-index: 		100;
@@ -1580,7 +1575,7 @@ body {
 	display: 		block;
 	font-family: 	arial;
 	font-weight: 	bold;
-	font-size: 		11px;
+	font-size: 		0.6em;
 }
 
 #chatBox #sendChatMessage {
@@ -1597,20 +1592,20 @@ body {
 }
 
 #chatBox .message .name {
-	font-size: 		15.56px;
+	font-size: 		0.8em;
 	font-weight: 	bold;
 	color: 			#ff7100;
 	width: 			105px;
 }
 
 #chatBox .message .text {
-	font-size:	15.5px;
+	font-size:	0.8em;
 	width: 		615px;
 	color: 		#3c3c3c;
 }
 
 #chatBox .message .time {
-	font-size: 		13.6px;
+	font-size: 		0.7em;
 	color: 			#afad79;
 	margin-right:	3px;
 }
