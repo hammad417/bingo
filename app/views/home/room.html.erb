@@ -83,12 +83,11 @@
           }
           else {
             // Mozilla doesn't support zoom, use -moz-transform to scale and compensate for lost width
-            $('#divWrap').css('-moz-transform', "scale(" + zoomLev*6 + ")");
+            $('#divWrap').css('-moz-transform', "scale(" + zoomLev + ")");
             $('#divWrap').css('width',($(window).width()/(zoomLev*6)));
             $('#divWrap').css('position', 'relative');
-            $('#divWrap').css('left', (($(window).width() - minW) / 6) + "px");
-            $('#divWrap').css('top', "500px");
-            $('#divWrap').css('position', 'relative');
+            $('#divWrap').css('left', "0px");
+            //$('#divWrap').css('top', "-300px");
           }
         }
         else {
