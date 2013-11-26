@@ -1669,3 +1669,11 @@ body {
 {
 	padding-bottom: 0px !important;
 }
+.left-margin
+{
+	margin-left: 12px;
+}
+.bottom-margin
+{
+	margin-bottom: 20px;
+}
