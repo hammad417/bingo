@@ -1,0 +1,36 @@
+<div class="span5 offset3">
+  <h2>Sign up</h2>
+</div>
+
+
+<div class="well span5 offset3 remove-padding">
+  <div class="list-profile list-group list-group-flush">
+    <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name))  do |f| %>
+      <%= devise_error_messages! %>
+      <div class="list-group-item">
+        <div class="list-group-item-heading heading"><%= f.label :firstname %></div>
+        <div class="text-fields"><%= f.text_field :fname, :autofocus => true %></div>
+        <div class='clearfix'></div>
+        <div class="list-group-item-heading heading"><%= f.label :lastname %></div>
+        <div class="text-fields"><%= f.text_field :lname, :autofocus => true %></div>
+        <div class='clearfix'></div>
+        <div class="list-group-item-heading heading"><%= f.label :email %></div>
+        <div class="text-fields"><%= f.text_field :email, :autofocus => true %></div>
+        <div class='clearfix'></div>
+        <div class="list-group-item-heading heading"><%= f.label :password %></div>
+        <div class="text-fields"><%= f.password_field :password %></div>
+        <div class='clearfix'></div>
+        <div class="list-group-item-heading heading"><%= f.label :password_confirmation %></div>
+        <div class="text-fields"><%= f.password_field :password_confirmation %></div>
+        <div class='clearfix'></div>
+        <div class="list-group-item">
+          <%= f.submit "Sign up", :class=>"btn btn-success btn-large full-btn" %>
+        </div>   
+
+        <div class="list-group-item">
+          <%= link_to "Sign in", new_session_path(resource_name), :class=>"btn full-btn btn-inverse btn-large" %>
+        </div>
+      </div>  
+    <% end %>
+  </div>
+</div>

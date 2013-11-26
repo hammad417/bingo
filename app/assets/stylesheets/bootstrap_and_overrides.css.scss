@@ -19,8 +19,7 @@ body {
 }
 
 .well,
-.navbar,
-.list-group-item {
+.navbar {
 	@include gradient-vertical(#f6f6df, #e1e0af);
 	border: 1px solid #d2d196;
 }
@@ -66,6 +65,7 @@ body {
 }
 
 .list-profile {
+	background: transparent;
 	.list-group-item {
 		font-family: "Arial Rounded", Arial, sans-serif;
 		font-size: 20px;
@@ -142,4 +142,28 @@ body {
 			@include gradient-vertical(darken(#478cca, 3%), darken(#0b5a97, 5%));
 		}
 	}
+}
+
+.text-fields {
+		color: #7e3b09;
+		font-weight: 700;
+		float: right;
+		border-radius: 4px;
+		display: inline-block;
+		padding: 0px 0px;
+		
+	}
+
+.text-fields input{
+	height: 40px;
+	width:	90%;
+}
+.heading{
+	margin-left: 30px !important;
+}
+.signin-link{
+	padding-top: 24px !important;
+}
+.signup-button{
+	padding-top: 10px;
 }

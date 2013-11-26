@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'ArialRoundedMTBoldBold';
-    src: url('/assets/font/arial_rounded_mt_bold.eot');
-    src: url('/assets/font/arial_rounded_mt_bold.eot') format('embedded-opentype'),
-         url('/assets/font/arial_rounded_mt_bold.woff') format('woff'),
-         url('/assets/font/arial_rounded_mt_bold.ttf') format('truetype'),
-         url('/assets/font/arial_rounded_mt_bold.svg#ArialRoundedMTBoldBold') format('svg');
+    src: url('/assets/arial_rounded_mt_bold.eot');
+    src: url('/assets/arial_rounded_mt_bold.eot') format('embedded-opentype'),
+         url('/assets/arial_rounded_mt_bold.woff') format('woff'),
+         url('/assets/arial_rounded_mt_bold.ttf') format('truetype'),
+         url('/assets/arial_rounded_mt_bold.svg#ArialRoundedMTBoldBold') format('svg');
 }
 
 /* Disable text selection */
@@ -30,7 +30,7 @@
 	-webkit-border-radius: 	10px;
 	-moz-border-radius: 	10px;
 	border-radius: 			10px;
-	behavior: 				url(/assets/css/PIE.htc);
+	behavior: 				url(/assets/PIE.htc);
 }
 
 .panel .panel-heading {
@@ -52,7 +52,7 @@
 	-moz-border-radius-topright: 	10px;
 	border-top-left-radius: 		10px;
 	border-top-right-radius: 		10px;
-	behavior: 						url(/assets/css/PIE.htc);
+	behavior: 						url(/assets/PIE.htc);
 }
 
 .panel .panel-heading .panel-title {
@@ -60,7 +60,7 @@
 	font-family: 	"ArialRoundedMTBoldBold";
 	font-size: 		14.5px;
 	text-shadow: 	0px -1px 0px rgba(0, 0, 0, 1);
-	behavior: 		url(/assets/css/PIE.htc);
+	behavior: 		url(/assets/PIE.htc);
 }
 
 /* upside down version of the panel */
@@ -83,14 +83,14 @@
 	-moz-border-radius-bottomright: 	10px;
 	border-top-bottom-radius: 			10px;
 	border-top-bottom-radius: 			10px;
-	behavior: 							url(/assets/css/PIE.htc);
+	behavior: 							url(/assets/PIE.htc);
 }
 
 .panel .panel-footer .panel-title {
 	color: 				#FFF;
 	font-size:			17px;
 	text-shadow: 		0px -1px 0px rgba(0, 0, 0, 1);
-	behavior: 			url(/assets/css/PIE.htc);
+	behavior: 			url(/assets/PIE.htc);
 }
 
 .big-orange-button {
@@ -102,7 +102,7 @@
 	font-size: 			14.5px;
 	font-family: 		"ArialRoundedMTBoldBold";
 	text-shadow: 		0px -1px 0px rgba(0, 0, 0, 1);
-	behavior: 			url(/assets/css/PIE.htc);
+	behavior: 			url(/assets/PIE.htc);
 }
 
 .orange-button {
@@ -114,7 +114,7 @@
 	font-size: 			14.5px;
 	font-family: 		"ArialRoundedMTBoldBold";
 	text-shadow: 		0px -1px 0px rgba(0, 0, 0, 1);
-	behavior: 			url(/assets/css/PIE.htc);
+	behavior: 			url(/assets/PIE.htc);
 }
 
 .orange-button img {
@@ -131,7 +131,7 @@
 	font-size: 			14.5px;
 	font-family: 		"ArialRoundedMTBoldBold";
 	text-shadow: 		0px -1px 0px rgba(0, 0, 0, 1);
-	behavior: 			url(/assets/css/PIE.htc);
+	behavior: 			url(/assets/PIE.htc);
 }
 
 .orange-button-square {
@@ -144,7 +144,7 @@
 	font-size: 			15.3px;
 	font-family: 		"ArialRoundedMTBoldBold";
 	text-shadow: 		0px -1px 0px rgba(125, 63, 16, 1);
-	behavior: 			url(/assets/css/PIE.htc);
+	behavior: 			url(/assets/PIE.htc);
 }
 
 .orange-button-square-light {
@@ -157,7 +157,7 @@
 	font-size: 			18.1px;
 	font-family: 		"ArialRoundedMTBoldBold";
 	text-shadow: 		0px 1px 0px rgba(255, 255, 255, 0.45);
-	behavior: 			url(/assets/css/PIE.htc);
+	behavior: 			url(/assets/PIE.htc);
 }
 
 .orange-button-dropdown {
@@ -171,7 +171,7 @@
 	font-size: 			15.8px;
 	font-family: 		"ArialRoundedMTBoldBold";
 	text-shadow: 		0px -1px 0px rgba(0, 0, 0, 0.42);
-	behavior: 			url(/assets/css/PIE.htc);
+	behavior: 			url(/assets/PIE.htc);
 }
 
 .big-green-button {
@@ -1661,4 +1661,11 @@ body {
 
 #winnerModalDutch .winner:nth-child(n+3) {
 	margin-top: -28px;
+}
+.full-btn{
+	width: 100% !important;
+}
+.remove-padding
+{
+	padding-bottom: 0px !important;
 }

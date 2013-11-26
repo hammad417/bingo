@@ -12,5 +12,21 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery-ui-1.10.3.custom.min
 //= require twitter/bootstrap
-//= require_tree .
+//= require jquery.mousewheel
+//= require jquery.jscrollpane.min.js
+//= require sly.min
+//= require jquery.simplyscroll
+//= require jcanvas.min
+//= require jquery.crSpline
+//= require Tables
+//= require Players
+//= require character
+//= require respond
+//= require jquery.checkbox.min
+//= require chatbox
+//= require emoticon
+//= require transit
+//= require chance
+//= require dispenser.canvas 

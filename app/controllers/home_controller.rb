@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
 
   def room
-    render :layout => false
+    #ender :layout => false
   end
 
 end

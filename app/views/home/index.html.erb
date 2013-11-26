@@ -1,3 +1,4 @@
+<%= link_to "SignOut", destroy_user_session_path(), :method => "delete" %>
 <div class="row">
 	<div class="col-lg-4">
 		<div class="well">
@@ -66,6 +67,149 @@
 				</div>
 			</div>
 		</div>
+		<section id="cards" class="">
+      <div class="row-fluid">
+        <ul id="cards-menu" class="col-12">
+          <li>
+            <div>
+              <div class="btn-group">
+                <button type="button" class="btn orange-button-dropdown dropdown-toggle" data-toggle="dropdown">Buy Card!</button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Dropdown link</a></li>
+                  <li><a href="#">Dropdown link</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div>
+              <input type="checkbox" data-checkbox="custom" CHECKED /> Auto Buy
+            </div>
+          </li>
+          <li class="divider"></li>
+          <li>
+            <div>
+              Cards Bought <div class="counter">999</div>
+            </div>
+          </li>
+          <li class="divider"></li>
+          <li>
+            <div>
+              Cards Available <div class="counter">999</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div id="gamecards" class="row-fluid">
+        <div id="gamecards-container">
+          <ul>
+            <li class="small-gamecard-container">
+              <ul class="col-3 small-gamecard">
+              </ul>
+
+              <ul class="col-3 small-gamecard">
+              </ul>
+
+              <ul class="col-3 small-gamecard">
+              </ul>
+
+              <ul class="col-3 small-gamecard">
+              </ul>
+
+              <ul class="col-3 small-gamecard">
+              </ul>
+
+              <ul class="col-3 small-gamecard">
+              </ul>
+
+              <ul class="col-3 small-gamecard unbought">
+              </ul>
+
+              <ul class="col-3 small-gamecard unbought">
+              </ul>
+            </li>
+
+            <li class="col small-gamecard-container">
+              <ul class="col-3 small-gamecard unbought">
+              </ul>
+
+              <ul class="col-3 small-gamecard unbought">
+              </ul>
+
+              <ul class="col-3 small-gamecard unbought">
+              </ul>
+
+              <ul class="col-3 small-gamecard unbought">
+              </ul>
+
+              <ul class="col-3 small-gamecard unbought">
+              </ul>
+
+              <ul class="col-3 small-gamecard unbought">
+              </ul>
+
+              <ul class="col-3 small-gamecard unbought">
+              </ul>
+
+              <ul class="col-3 small-gamecard unbought">
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <script type="text/javascript">
+        for(var i = 1; i < 26; i++) {
+          if(i == 13) {
+            $(".small-gamecard:not(.unbought)").append('<li class="star"></li>');
+          } else {
+            var myChance = new Chance();
+            var addon = (myChance.bool() && myChance.bool()) ? 'checked' : '';
+
+
+            $(".small-gamecard:not(.unbought)").append('<li class="'+addon+'">'+i+'</li>');
+          }
+        }
+
+        $(".small-gamecard.unbought").html('<li><button class="btn green-button-orange-border" data-action="buycard">Buy Card!</button></li>')
+        </script>
+
+        <div id="gameCardsScrollbar">
+          <div class="scrollLeft pull-left"></div>
+          <div class="scrollbar pull-left">
+            <div class="handle"></div>
+          </div>
+          <div class="scrollRight pull-right"></div>
+        </div>
+
+        <script type="text/javascript">
+          $(document).ready(function(){
+            $("#gamecards-container").sly({
+              horizontal: 1,
+              itemNav: 'centered',
+              smart: 1,
+              activateOn: 'click',
+              mouseDragging: 0,
+              touchDragging: 0,
+              releaseSwing: 1,
+              startAt: 0,
+              scrollSource: $('#gamecards'),
+              scrollBar: $('#gameCardsScrollbar .scrollbar'),
+              scrollBy: 1,
+              speed: 300,
+              elasticBounds: 1,
+              easing: 'easeOutExpo',
+              dragHandle: 1,
+              dynamicHandle: 0,
+              clickBar: 0,
+
+              // Buttons
+              prev: $("#gameCardsScrollbar .scrollLeft"),
+              next: $("#gameCardsScrollbar .scrollRight")
+            });
+          });
+        </script>
+      </div>
+    </section>
+
 		<div class="well">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, voluptate deleniti nam voluptatem autem quasi maxime sapiente quisquam minus dicta! Provident, molestiae accusamus cumque dicta ipsum blanditiis quae porro quibusdam ratione recusandae adipisci repellendus ut incidunt rem itaque. Aspernatur, velit ratione magnam est cupiditate officiis adipisci sunt consequuntur id quam.</div>
 	</div>
 </div>
