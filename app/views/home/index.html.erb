@@ -1,4 +1,3 @@
-<%= link_to "SignOut", destroy_user_session_path(), :method => "delete" %>
 <div class="row">
   	<div class="col-lg-4">
   		<div class="well">
@@ -27,9 +26,18 @@
   			<ul class="nav navbar-nav pull-right nav-game">
   				<li class="active"><a href="#"><div class="icon icon-user icon-2x"></div><div>Friends</div></a></li>
   				<li><a href="#"><div class="icon icon-cog icon-2x"></div><div>Settings</div></a></li>
-  				<li><a href="#"><div class="icon icon-info-alt icon-2x"></div><div>Info</div></a></li>
+  				<li><a href="#"><div class="icon icon-book icon-2x"></div><div>Info</div></a></li>
   				<li><a href="#"><div class="icon icon-volume-up icon-2x"></div><div>Sound</div></a></li>
   				<li><a href="#"><div class="icon icon-fullscreen icon-2x"></div><div>Full Screen</div></a></li>
+          <% if current_user %>
+            <li>
+              <%= link_to destroy_user_session_path, :method => :delete do %>
+                <div class="icon icon-off icon-2x"></div><div>SignOut</div>
+              <% end %>
+            </li>
+            <% else %>
+              <li><a href="/users/sign_in"><div class="icon icon-user icon-2x"></div><div>SignIn</div></a></li>
+          <% end %>
   			</ul>
   		</nav>
   		<div class="rooms row-fluid">
