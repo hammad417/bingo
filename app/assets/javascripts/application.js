@@ -29,4 +29,4 @@
 //= require emoticon
 //= require transit
 //= require chance
-//= require dispenser.canvas 
+//= require dispenser.canvas

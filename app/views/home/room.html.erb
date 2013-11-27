@@ -76,30 +76,29 @@
   var minW = 768;
 
   function CheckSizeZoom() {
-    if ($(window).width() > minW) {
-      var zoomLev =  minW / $(window).width();
-      if (typeof (document.body.style.zoom) != "undefined") {
-        $(document.body).css('zoom', zoomLev);
+        if ($(window).width() > minW && $(window).width() < 1367) {
+          var zoomLev =  minW / ($(window).width() *1.5);
+          if (typeof (document.body.style.zoom) != "undefined") {
+            $(document.body).css('zoom', zoomLev);
+          }
+          else {
+            // Mozilla doesn't support zoom, use -moz-transform to scale and compensate for lost width
+            $('#divWrap').css('-moz-transform', "scale(" + zoomLev + ")");
+            $('#divWrap').css('width',($(window).width()/(zoomLev*6)));
+            $('#divWrap').css('position', 'relative');
+            $('#divWrap').css('left', "0px");
+            $('#divWrap').css('top', "-500px");
+          }
+        }
+        else {
+          $(document.body).css('zoom', '');
+          $('#divWrap').css('position', '');
+          $('#divWrap').css('left', "");
+          $('#divWrap').css('top', "");
+          $('#divWrap').css('-moz-transform', "");
+          $('#divWrap').width("");
+        }
       }
-      else {
-        // Mozilla doesn't support zoom, use -moz-transform to scale and compensate for lost width
-        $('#divWrap').css('-moz-transform', "scale(" + zoomLev + ")");
-        $('#divWrap').css('width',($(window).width()/(zoomLev*6)));
-        $('#divWrap').css('position', 'relative');
-        $('#divWrap').css('margin', '0 auto');
-        $('#divWrap').css('float', 'left');
-        $('#divWrap').css('top', "-300px");
-      }
-    }
-    else {
-      $(document.body).css('zoom', '');
-      $('#divWrap').css('position', '');
-      $('#divWrap').css('left', "");
-      $('#divWrap').css('top', "");
-      $('#divWrap').css('-moz-transform', "");
-      $('#divWrap').width("");
-    }
-  }
 
   $(function () {
     CheckSizeZoom();
@@ -111,7 +110,7 @@
 
 <div id="divWrap" style="visibility: hidden">
   <div class="container-narrow">
-    <div class="row">
+    <div class="row-fluid">
       <div id="wrapper" class="col-12">
         <section id="bingo" class="row">
           <div id="game" class="col-7">
@@ -238,7 +237,7 @@
                 <script type="text/javascript">
                 for(var i = 1; i < 76; i++) {
                   var myChance = new Chance();
-                  var addon = (myChance.bool()) ? 'active' : '';
+                  var addon = (myChance.bool()) ? '' : '';
 
                   $("#gamecard-numbers").append('<li class="'+addon+'">'+i+'</li>');
                 }
@@ -1007,4 +1006,4 @@
     })
   </script>
 </div>
- 
+ <%= javascript_include_tag "/assets/common.js" %>

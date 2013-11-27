@@ -22,10 +22,9 @@
           </div>  
         <% end -%>
         <div class='clearfix'></div>
-         <div class="list-group-item">
-          <div class="signin-button">
-            <%= link_to "Sign in", new_session_path(resource_name), :class=>"btn btn-success btn-large full-btn" %>
-          </div>
+          <div class="list-group-item">
+            <%= f.submit "Sign in", :class=>"btn btn-success btn-large full-btn" %>
+          </div>   
           <div class='clearfix'></div>
           <div class="signup-button">
             <%= link_to "Sign up", new_registration_path(resource_name), :class=>"btn btn-inverse btn-large full-btn" %>
