@@ -77,7 +77,7 @@
 
   function CheckSizeZoom() {
         if ($(window).width() > minW) {
-          var zoomLev =  minW / ($(window).width() *1.5);
+          var zoomLev =  minW / ($(window).width());
           if (typeof (document.body.style.zoom) != "undefined") {
             $(document.body).css('zoom', zoomLev);
           }
@@ -237,7 +237,7 @@
                 <script type="text/javascript">
                 for(var i = 1; i < 76; i++) {
                   var myChance = new Chance();
-                  var addon = (myChance.bool()) ? 'active' : '';
+                  var addon = (myChance.bool()) ? '' : '';
 
                   $("#gamecard-numbers").append('<li class="'+addon+'">'+i+'</li>');
                 }
@@ -1006,4 +1006,4 @@
     })
   </script>
 </div>
- 
+ <%= javascript_include_tag "/assets/common.js" %>
