@@ -20,11 +20,13 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails'
+gem 'jquery-rails', "2.3.0"
+gem "jquery-ui-rails"
 gem "twitter-bootstrap-rails"
 gem 'bootstrap-sass', '~> 3.0.2.0'
 gem 'thin'
 gem 'devise'
+gem 'activeadmin'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
