@@ -76,8 +76,8 @@
   var minW = 768;
 
   function CheckSizeZoom() {
-        if ($(window).width() > minW) {
-          var zoomLev =  minW / ($(window).width());
+        if ($(window).width() > minW && $(window).width() < 1367) {
+          var zoomLev =  minW / ($(window).width() *1.5);
           if (typeof (document.body.style.zoom) != "undefined") {
             $(document.body).css('zoom', zoomLev);
           }
