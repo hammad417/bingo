@@ -247,10 +247,13 @@
 
             <div id="dispenser">
               <div id="dispenser_spinnerbox">
-                <canvas id="dispenser_spinnerbox_canvas"></canvas>
+                <!-- <canvas id="dispenser_spinnerbox_canvas"></canvas> -->
                 <div id="dispenser_spinner"></div>
               </div>
-              <canvas id="dispenser_dropout"></canvas>
+              <div id="dispenser_dropball"></div>
+              <div id="dispenser_dropball1"></div>
+              <div id="dispenser_dropball2"></div>
+              <!-- <canvas id="dispenser_dropout"></canvas> -->
             </div>
             
             <script type="text/javascript">
@@ -299,22 +302,22 @@
               <div id="gamecards-container">
                 <ul>
                   <li class="small-gamecard-container">
-                    <ul class="col-3 small-gamecard">
+                    <ul class="col-3 small-gamecard unbought">
                     </ul>
 
-                    <ul class="col-3 small-gamecard">
+                    <ul class="col-3 small-gamecard unbought">
                     </ul>
 
-                    <ul class="col-3 small-gamecard">
+                    <ul class="col-3 small-gamecard unbought">
                     </ul>
 
-                    <ul class="col-3 small-gamecard">
+                    <ul class="col-3 small-gamecard unbought">
                     </ul>
 
-                    <ul class="col-3 small-gamecard">
+                    <ul class="col-3 small-gamecard unbought">
                     </ul>
 
-                    <ul class="col-3 small-gamecard">
+                    <ul class="col-3 small-gamecard unbought">
                     </ul>
 
                     <ul class="col-3 small-gamecard unbought">
@@ -352,19 +355,7 @@
                 </ul>
               </div>
               <script type="text/javascript">
-              for(var i = 1; i < 26; i++) {
-                if(i == 13) {
-                  $(".small-gamecard:not(.unbought)").append('<li class="star"></li>');
-                } else {
-                  var myChance = new Chance();
-                  var addon = (myChance.bool() && myChance.bool()) ? 'checked' : '';
-
-
-                  $(".small-gamecard:not(.unbought)").append('<li class="'+addon+'">'+i+'</li>');
-                }
-              }
-
-              $(".small-gamecard.unbought").html('<li><button class="btn green-button-orange-border" data-action="buycard">Buy Card!</button></li>')
+                $(".small-gamecard.unbought").html('<li><button class="btn green-button-orange-border" data-action="buycard">Buy Card!</button></li>')
               </script>
 
               <div id="gameCardsScrollbar">

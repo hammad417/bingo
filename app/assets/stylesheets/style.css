@@ -802,13 +802,15 @@ body {
 	color:			#FFF;
 	text-shadow:	0px -1px 0px rgba(0, 0, 0, 0.31);
 }
-
 #gamecards .small-gamecard-container .small-gamecard li.star {
 	background:		url(/assets/small-gamecard-item-star.png) no-repeat;
 	color:			#FFF;
 	text-shadow:	0px -1px 0px rgba(0, 0, 0, 0.31);
 }
-
+#gamecards .small-gamecard-container .small-gamecard li.pattern {
+	background: transparent;
+	background-color: yellow;
+}
 #gamecards .small-gamecard-container .small-gamecard.unbought li {
 	background: none;
 	text-align: center;
@@ -1671,4 +1673,71 @@ body {
 .bottom-margin
 {
 	margin-bottom: 20px;
+}
+#chute1 {
+	background: url(/assets/dispenser_blue_ball_small.png);
+  width:38px;
+  height:38px;
+  position:absolute;
+  z-index: 500;
+}
+#chute2 {
+	background: url(/assets/dispenser_red_ball_small.png);
+  width:38px;
+  height:38px;
+  position:absolute;
+  z-index: 500;
+}
+#chute3 {
+	background: url(/assets/dispenser_green_ball_small.png);
+  width:38px;
+  height:38px;
+  position:absolute;
+  z-index: 500;
+}
+#chute4 {
+	background: url(/assets/dispenser_purple_ball_small.png);
+  width:38px;
+  height:38px;
+  position:absolute;
+  z-index: 500;
+}
+.chute1 {
+	left: 105px;
+	top: 190px;
+	z-index: 7 !important;
+}
+.ball-number {
+	text-align: center;
+	margin-top: 11px;
+	z-index: 7 !important;
+	color: black;
+	font-weight: bold;
+}
+#dispenser_dropball {
+	background: url(/assets/dispenser_spinner_dropper.png);
+	width: 48px;
+	height: 27px;
+	position: absolute;
+	top: 218px;
+	z-index: 8;
+	left: 99px;
+}
+#dispenser_dropball1 {
+	background: url(/assets/dispenser_result_background.png);
+	width: 96px;
+	height: 96px;
+	position: absolute;
+	left: 75px;
+	top: 285px;
+	z-index: 6;
+}
+#dispenser_dropball2 {
+	background: url(/assets/dispenser_result_overlay.png);
+	width: 120px;
+	left: 63px;
+	height: 183px;
+	top: 243px;
+	z-index: 10;
+	position: absolute;
 }
